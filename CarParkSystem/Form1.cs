@@ -15,6 +15,7 @@ namespace CarParkSystem
         Carpark carpark = new Carpark();
         int currentFloor = 0;
         Car currentCar;
+        PaymentChip currentChip;
         public Form1()
         {
             InitializeComponent();
@@ -54,22 +55,26 @@ namespace CarParkSystem
 
         private void btnNewCar_Click(object sender, EventArgs e)
         {
-            if ((tbxLicense.Text != "") &&(tbxPassCode.Text != ""))
+            if (currentChip != null)
             {
-                string license = tbxLicense.Text;
-                string passcode = tbxPassCode.Text;
-                carpark.newCar(license,passcode);
-                lblErrorText.Text = "";
-                tbxLicense.Text = "";
-                tbxPassCode.Text = "";
-                updateCarListBox();
-                currentCar = carpark.getCar(license);
-                lblCurrentCar.Text = "Current cars license plate:"+license;
 
-            }
-            else
-            {
-                lblErrorText.Text = "Enter information";
+                if ((tbxLicense.Text != "") && (tbxPassCode.Text != ""))
+                {
+                    string license = tbxLicense.Text;
+                    string passcode = tbxPassCode.Text;
+                    carpark.newCar(license, passcode);
+                    lblErrorText.Text = "";
+                    tbxLicense.Text = "";
+                    tbxPassCode.Text = "";
+                    updateCarListBox();
+                    currentCar = carpark.getCar(license);
+                    lblCurrentCar.Text = "Current cars license plate:" + license;
+
+                }
+                else
+                {
+                    lblErrorText.Text = "Enter information";
+                }
             }
         }
 

@@ -166,9 +166,11 @@ namespace CarParkSystem
         private int floor { get; set; }
         private int place { get; set; }
         private string passCode { get;}
+        private int paymentChipID;
 
-        public Car(string licensePlate, string passCode)
+        public Car(string licensePlate, string passCode,int paymentChipID)
         {
+            this.paymentChipID = paymentChipID;
             this.licensePlate = licensePlate;
             this.passCode = passCode;
         }
