@@ -113,6 +113,12 @@ namespace CarParkSystem
     public class ChipMachine : Machine
     {
         //create chips
+        private int iD = -1;
+        public void generateChip(int iD)
+        {
+            iD++;
+            ticketChip[iD] = new PaymentChip(iD);
+        }
     }
     public class DiscountMachine : Machine
     {
@@ -122,10 +128,6 @@ namespace CarParkSystem
     public class PaymentMachine : Machine
     {
         //commit payment and remove chips
-    }
-    public class ChipReader : Machine
-    {
-
     }
     public class PaymentChip
     {
