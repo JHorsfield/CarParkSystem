@@ -33,7 +33,6 @@ namespace CarParkSystem
         private ChipMachine chipMachine { get; set; }
         private PaymentMachine paymentMachine { get; set; }
         private DiscountMachine discountMachine { get; set; }
-        private ChipReader chipReader { get; set; }
 
         public Carpark()
         {
@@ -107,7 +106,7 @@ namespace CarParkSystem
     public class Machine
     {
         static private int maxSpaces = 600;//make this generatable and linked to the other maxSpaces
-        static protected PaymentChip[] ticketChip = new PaymentChip[maxSpaces];
+        static protected Dictionary<int, PaymentChip> ticketChip = new Dictionary<int, PaymentChip>();
 
     }
     public class ChipMachine : Machine
@@ -117,22 +116,34 @@ namespace CarParkSystem
         public void generateChip(int iD)
         {
             iD++;
-            ticketChip[iD] = new PaymentChip(iD);
+            ticketChip.Add(iD, new PaymentChip(iD));
         }
     }
     public class DiscountMachine : Machine
     {
         //adds discount to a chip
-
+        public void addDiscount(int dc, int iD)
+        {
+            ticketChip[iD].applyDiscount(dc);
+        }
     }
     public class PaymentMachine : Machine
     {
         //commit payment and remove chips
+        public void displayPayment(int iD)
+        {
+            TimeSpan duration = DateTime.Now - ticketChip[iD].startTime;
+            double price = duration.TotalHours;
+        }
+        public void makePayment(int iD)
+        {
+            ticketChip.Remove(iD);
+        }
     }
     public class PaymentChip
     {
         private int iD { get; }
-        private DateTime startTime { get; }
+        public DateTime startTime { get; }
         private int discount { get; set; }
         public PaymentChip(int iD)
         {
