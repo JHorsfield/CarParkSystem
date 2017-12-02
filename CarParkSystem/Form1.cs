@@ -78,6 +78,11 @@ namespace CarParkSystem
                     lblErrorText.Text = "Enter information";
                 }
             }
+            else
+            {
+                lblErrorText.Text = "Get a chip please";
+
+            }
         }
 
         private void btnUpFloor_Click(object sender, EventArgs e)
