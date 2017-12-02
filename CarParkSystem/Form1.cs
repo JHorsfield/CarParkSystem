@@ -23,7 +23,7 @@ namespace CarParkSystem
             lbxCarList.Items.Clear();
             foreach (Car car in carpark.returnCarList())
             {
-                lbxCarList.Items.Add(car);
+                lbxCarList.Items.Add(car.licenseString());
             }
         }
 
@@ -37,6 +37,7 @@ namespace CarParkSystem
                 lblErrorText.Text = "";
                 tbxLicense.Text = "";
                 tbxPassCode.Text = "";
+                updateCarListBox();
             }
             else
             {

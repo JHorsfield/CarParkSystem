@@ -150,5 +150,9 @@ namespace CarParkSystem
         {
             this.floor = floor;
         }
+        public string licenseString()
+        {
+            return (licensePlate);
+        }
     }
 }
