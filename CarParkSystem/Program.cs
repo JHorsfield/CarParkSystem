@@ -118,10 +118,10 @@ namespace CarParkSystem
     {
         //create chips
         private int iD = -1;
-        public void generateChip(int iD)
+        public void generateChip()
         {
-            iD++;
-            ticketChip.Add(iD, new PaymentChip(iD));
+            this.iD++;
+            ticketChip.Add(this.iD, new PaymentChip(this.iD));
         }
     }
     public class DiscountMachine : Machine
@@ -166,6 +166,7 @@ namespace CarParkSystem
         private int floor { get; set; }
         private int place { get; set; }
         private string passCode { get;}
+        private int coinId;
 
         public Car(string licensePlate, string passCode)
         {
@@ -183,6 +184,10 @@ namespace CarParkSystem
         public string licenseString()
         {
             return (licensePlate);
+        }
+        public int getCoinId()
+        {
+            return coinId;
         }
     }
 }

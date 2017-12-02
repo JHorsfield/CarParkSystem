@@ -32,6 +32,7 @@
             this.lbxFloors = new System.Windows.Forms.ListBox();
             this.lbxCarList = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblCurrentCar = new System.Windows.Forms.Label();
             this.lblErrorText = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,11 +46,10 @@
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblParkingError = new System.Windows.Forms.Label();
             this.BtnPark = new System.Windows.Forms.Button();
             this.btnDownFloor = new System.Windows.Forms.Button();
             this.btnUpFloor = new System.Windows.Forms.Button();
-            this.lblParkingError = new System.Windows.Forms.Label();
-            this.lblCurrentCar = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -100,6 +100,15 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Car entry";
+            // 
+            // lblCurrentCar
+            // 
+            this.lblCurrentCar.AutoSize = true;
+            this.lblCurrentCar.Location = new System.Drawing.Point(10, 136);
+            this.lblCurrentCar.Name = "lblCurrentCar";
+            this.lblCurrentCar.Size = new System.Drawing.Size(71, 13);
+            this.lblCurrentCar.TabIndex = 11;
+            this.lblCurrentCar.Text = "License Plate";
             // 
             // lblErrorText
             // 
@@ -160,6 +169,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Get Coin";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox3
             // 
@@ -223,6 +233,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "In park";
             // 
+            // lblParkingError
+            // 
+            this.lblParkingError.AutoSize = true;
+            this.lblParkingError.Location = new System.Drawing.Point(84, 24);
+            this.lblParkingError.Name = "lblParkingError";
+            this.lblParkingError.Size = new System.Drawing.Size(71, 13);
+            this.lblParkingError.TabIndex = 11;
+            this.lblParkingError.Text = "License Plate";
+            // 
             // BtnPark
             // 
             this.BtnPark.Location = new System.Drawing.Point(6, 134);
@@ -252,24 +271,6 @@
             this.btnUpFloor.Text = "go up floor";
             this.btnUpFloor.UseVisualStyleBackColor = true;
             this.btnUpFloor.Click += new System.EventHandler(this.btnUpFloor_Click);
-            // 
-            // lblParkingError
-            // 
-            this.lblParkingError.AutoSize = true;
-            this.lblParkingError.Location = new System.Drawing.Point(84, 24);
-            this.lblParkingError.Name = "lblParkingError";
-            this.lblParkingError.Size = new System.Drawing.Size(71, 13);
-            this.lblParkingError.TabIndex = 11;
-            this.lblParkingError.Text = "License Plate";
-            // 
-            // lblCurrentCar
-            // 
-            this.lblCurrentCar.AutoSize = true;
-            this.lblCurrentCar.Location = new System.Drawing.Point(10, 136);
-            this.lblCurrentCar.Name = "lblCurrentCar";
-            this.lblCurrentCar.Size = new System.Drawing.Size(71, 13);
-            this.lblCurrentCar.TabIndex = 11;
-            this.lblCurrentCar.Text = "License Plate";
             // 
             // Form1
             // 
