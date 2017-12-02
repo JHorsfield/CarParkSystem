@@ -16,7 +16,6 @@ namespace CarParkSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Carpark carpark;
             Application.Run(new Form1());
         }
     }
@@ -62,6 +61,12 @@ namespace CarParkSystem
         {
             return (numOfFloors);
         }
+        public Car getCar(string licensePlate)
+        {
+            Car currentCar = carList.Find(item => item.licenseString() == licensePlate);
+            return (currentCar);
+        }
+
     }
     public class Floor
     {
@@ -171,7 +176,7 @@ namespace CarParkSystem
         {
             this.place = place;
         }
-        public void changeFloor()
+        public void changeFloor(int floor)
         {
             this.floor = floor;
         }
