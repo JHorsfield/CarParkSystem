@@ -23,20 +23,34 @@ namespace CarParkSystem
     public class Carpark
     {
         private const int maxSpaces = 600;//make this generatable and linked to the other maxSpaces
-        private const int numOfFloors = 12;
-        
-        private List<Car> carList = new List<Car>();
+        private const int numOfFloors = 4;
 
-        private Floor[] floor = new Floor[numOfFloors];
+        private List<Car> carList { get; set; }
+        private Floor[] floor { get; set; }
+        private Enterance enterance { get; set; }
+        private Exit exit { get; set; }
 
-        private Enterance enterance;
-        private Exit exit;
+        private ChipMachine chipMachine { get; set; }
+        private PaymentMachine paymentMachine { get; set; }
+        private DiscountMachine discountMachine { get; set; }
+        private ChipReader chipReader { get; set; }
 
-        private ChipMachine chipMachine;
-        private PaymentMachine paymentMachine;
-        private DiscountMachine discountMachine;
-        private ChipReader chipReader;
+        public Carpark()
+        {
+            floor = new Floor[numOfFloors];
+            carList = new List<Car>();
 
+            enterance = new Enterance();
+            exit = new Exit();
+        }
+        public void newCar(string licensePlate, string passcode)
+        {
+            enterance.addNewCar(carList, licensePlate, passcode);
+        }
+        public List<Car> returnCarList()
+        {
+            return (carList);
+        }
     }
     public class Floor
     {

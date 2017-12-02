@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxCarList = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +48,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.lblErrorText = new System.Windows.Forms.Label();
+            this.lbxFloors = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -56,7 +58,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.lbxFloors);
+            this.groupBox1.Controls.Add(this.lbxCarList);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 501);
@@ -64,17 +67,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Floor space";
             // 
-            // listBox1
+            // lbxCarList
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 45);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(188, 446);
-            this.listBox1.TabIndex = 0;
+            this.lbxCarList.FormattingEnabled = true;
+            this.lbxCarList.Location = new System.Drawing.Point(6, 136);
+            this.lbxCarList.Name = "lbxCarList";
+            this.lbxCarList.Size = new System.Drawing.Size(188, 355);
+            this.lbxCarList.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.lblErrorText);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnNewCar);
@@ -247,6 +251,23 @@
             this.button11.Text = "go up floor";
             this.button11.UseVisualStyleBackColor = true;
             // 
+            // lblErrorText
+            // 
+            this.lblErrorText.AutoSize = true;
+            this.lblErrorText.Location = new System.Drawing.Point(87, 24);
+            this.lblErrorText.Name = "lblErrorText";
+            this.lblErrorText.Size = new System.Drawing.Size(71, 13);
+            this.lblErrorText.TabIndex = 10;
+            this.lblErrorText.Text = "License Plate";
+            // 
+            // lbxFloors
+            // 
+            this.lbxFloors.FormattingEnabled = true;
+            this.lbxFloors.Location = new System.Drawing.Point(6, 25);
+            this.lbxFloors.Name = "lbxFloors";
+            this.lbxFloors.Size = new System.Drawing.Size(188, 108);
+            this.lbxFloors.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,7 +292,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxCarList;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -290,6 +311,8 @@
         private System.Windows.Forms.Button btnNewCar;
         private System.Windows.Forms.TextBox tbxPassCode;
         private System.Windows.Forms.TextBox tbxLicense;
+        private System.Windows.Forms.Label lblErrorText;
+        private System.Windows.Forms.ListBox lbxFloors;
     }
 }
 
