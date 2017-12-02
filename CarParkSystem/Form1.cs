@@ -131,6 +131,8 @@ namespace CarParkSystem
                 currentCar = null;
                 updateFloors();
                 updateCarListBox();
+                btnDownFloor.Enabled = false;
+                btnUpFloor.Enabled = false;
             }
             else
             {
