@@ -16,6 +16,7 @@ namespace CarParkSystem
         int currentFloor = 0;
         Car currentCar;
         PaymentChip currentChip;
+
         public Form1()
         {
             InitializeComponent();
@@ -126,9 +127,9 @@ namespace CarParkSystem
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // get coin button
         {
-
+            carpark.chipMachine.generateChip();
         }
     }
 
