@@ -24,9 +24,9 @@ namespace CarParkSystem
     {
         private const int maxSpaces = 600;//make this generatable and linked to the other maxSpaces
         private const int numOfFloors = 12;
-
-        private Car[] listOFCars = new Car[maxSpaces];
+        
         private List<Car> carList = new List<Car>();
+
         private Floor[] floor = new Floor[numOfFloors];
 
         private Enterance enterance;
@@ -40,10 +40,26 @@ namespace CarParkSystem
     }
     public class Floor
     {
-        private const int floorSize = 50;
-        private bool[] carSpace = new bool[floorSize];
-
-
+        private  int maxCarsPerFloor = 50;
+        private int currentNumCars = 0;
+        public void addCar()
+        {
+            if (currentNumCars < 50)
+            {
+            currentNumCars++;
+            }
+        }
+        public void removeCar()
+        {
+            if (currentNumCars >0)
+            {
+            currentNumCars--;
+            }
+        }
+        public int spacesLeft()
+        {
+            return (maxCarsPerFloor - currentNumCars);
+        }
     }
     public class Enterance
     {

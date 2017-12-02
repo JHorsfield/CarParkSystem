@@ -31,6 +31,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNewCar = new System.Windows.Forms.Button();
+            this.tbxPassCode = new System.Windows.Forms.TextBox();
+            this.tbxLicense = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEntry = new System.Windows.Forms.Button();
@@ -40,14 +45,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tbxLicense = new System.Windows.Forms.TextBox();
-            this.tbxPassCode = new System.Windows.Forms.TextBox();
-            this.btnNewCar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -89,6 +89,48 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Car entry";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(112, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Passcode";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(112, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "License Plate";
+            // 
+            // btnNewCar
+            // 
+            this.btnNewCar.Location = new System.Drawing.Point(6, 19);
+            this.btnNewCar.Name = "btnNewCar";
+            this.btnNewCar.Size = new System.Drawing.Size(75, 23);
+            this.btnNewCar.TabIndex = 7;
+            this.btnNewCar.Text = "New Car";
+            this.btnNewCar.UseVisualStyleBackColor = true;
+            this.btnNewCar.Click += new System.EventHandler(this.btnNewCar_Click);
+            // 
+            // tbxPassCode
+            // 
+            this.tbxPassCode.Location = new System.Drawing.Point(6, 74);
+            this.tbxPassCode.Name = "tbxPassCode";
+            this.tbxPassCode.Size = new System.Drawing.Size(100, 20);
+            this.tbxPassCode.TabIndex = 6;
+            // 
+            // tbxLicense
+            // 
+            this.tbxLicense.Location = new System.Drawing.Point(6, 48);
+            this.tbxLicense.Name = "tbxLicense";
+            this.tbxLicense.Size = new System.Drawing.Size(100, 20);
+            this.tbxLicense.TabIndex = 5;
             // 
             // button5
             // 
@@ -178,6 +220,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "In park";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 134);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Park";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(6, 48);
@@ -195,57 +246,6 @@
             this.button11.TabIndex = 2;
             this.button11.Text = "go up floor";
             this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 134);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Park";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // tbxLicense
-            // 
-            this.tbxLicense.Location = new System.Drawing.Point(6, 48);
-            this.tbxLicense.Name = "tbxLicense";
-            this.tbxLicense.Size = new System.Drawing.Size(100, 20);
-            this.tbxLicense.TabIndex = 5;
-            // 
-            // tbxPassCode
-            // 
-            this.tbxPassCode.Location = new System.Drawing.Point(6, 74);
-            this.tbxPassCode.Name = "tbxPassCode";
-            this.tbxPassCode.Size = new System.Drawing.Size(100, 20);
-            this.tbxPassCode.TabIndex = 6;
-            // 
-            // btnNewCar
-            // 
-            this.btnNewCar.Location = new System.Drawing.Point(6, 19);
-            this.btnNewCar.Name = "btnNewCar";
-            this.btnNewCar.Size = new System.Drawing.Size(75, 23);
-            this.btnNewCar.TabIndex = 7;
-            this.btnNewCar.Text = "New Car";
-            this.btnNewCar.UseVisualStyleBackColor = true;
-            this.btnNewCar.Click += new System.EventHandler(this.btnNewCar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "License Plate";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Passcode";
             // 
             // Form1
             // 
