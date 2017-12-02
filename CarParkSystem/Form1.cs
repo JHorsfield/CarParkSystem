@@ -62,7 +62,7 @@ namespace CarParkSystem
                 {
                     string license = tbxLicense.Text;
                     string passcode = tbxPassCode.Text;
-                    carpark.newCar(license, passcode);
+                    carpark.newCar(license, passcode,currentChip.getId());
                     lblErrorText.Text = "";
                     tbxLicense.Text = "";
                     tbxPassCode.Text = "";

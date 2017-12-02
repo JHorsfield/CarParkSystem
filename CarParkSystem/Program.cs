@@ -45,9 +45,9 @@ namespace CarParkSystem
             enterance = new Enterance();
             exit = new Exit();
         }
-        public void newCar(string licensePlate, string passcode)
+        public void newCar(string licensePlate, string passcode,int id)
         {
-            enterance.addNewCar(carList, licensePlate, passcode);
+            enterance.addNewCar(carList, licensePlate, passcode,id);
         }
         public List<Car> returnCarList()
         {
@@ -94,9 +94,9 @@ namespace CarParkSystem
     public class Enterance
     {
         //give new car, linsence plat num,
-        public void addNewCar(List<Car> carList,string licensePlate, string passcode)
+        public void addNewCar(List<Car> carList,string licensePlate, string passcode,int id)
         {
-            Car newCar = new Car(licensePlate, passcode);
+            Car newCar = new Car(licensePlate, passcode,id);
             carList.Add(newCar);
         }
     }
@@ -159,6 +159,10 @@ namespace CarParkSystem
         {
             this.discount += discount;
         }
+        public int getId()
+        {
+            return (iD);
+        }
     }
     public class Car
     {
@@ -168,10 +172,11 @@ namespace CarParkSystem
         private string passCode { get;}
         private int coinId;
 
-        public Car(string licensePlate, string passCode)
+        public Car(string licensePlate, string passCode, int coinId)
         {
             this.licensePlate = licensePlate;
             this.passCode = passCode;
+            this.coinId = coinId;
         }
         public void changePlace(int place)
         {
