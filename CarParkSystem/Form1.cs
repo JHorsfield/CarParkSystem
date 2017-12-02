@@ -23,6 +23,7 @@ namespace CarParkSystem
             lblErrorText.Text = "";
             lblParkingError.Text = "";
             lblCurrentCar.Text = "";
+            btnNewCar.Enabled = false;
             updateFloors();
         }
         public void updateCarListBox()
@@ -129,7 +130,10 @@ namespace CarParkSystem
 
         private void button2_Click(object sender, EventArgs e) // get coin button
         {
-            carpark.chipMachine.generateChip();
+            int currentId = carpark.GetChipMachine().generateChip();
+            currentChip = carpark.GetChipMachine().getTicketChip()[currentId];
+            button2.Enabled = false;
+            btnNewCar.Enabled = true;
         }
     }
 

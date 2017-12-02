@@ -32,7 +32,6 @@ namespace CarParkSystem
         private ChipMachine chipMachine { get; set; }
         private PaymentMachine paymentMachine { get; set; }
         private DiscountMachine discountMachine { get; set; }
-
         public Carpark()
         {
             floor = new Floor[numOfFloors];
@@ -44,6 +43,7 @@ namespace CarParkSystem
 
             enterance = new Enterance();
             exit = new Exit();
+            chipMachine = new ChipMachine();
         }
         public void newCar(string licensePlate, string passcode,int id)
         {
@@ -65,6 +65,10 @@ namespace CarParkSystem
         {
             Car currentCar = carList.Find(item => item.licenseString() == licensePlate);
             return (currentCar);
+        }
+        public ChipMachine GetChipMachine()
+        {
+            return chipMachine;
         }
 
     }
@@ -112,16 +116,21 @@ namespace CarParkSystem
     {
         static private int maxSpaces = 600;//make this generatable and linked to the other maxSpaces
         static protected Dictionary<int, PaymentChip> ticketChip = new Dictionary<int, PaymentChip>();
+        public Dictionary<int, PaymentChip> getTicketChip()
+        {
+            return ticketChip;
+        }
 
     }
     public class ChipMachine : Machine
     {
         //create chips
         private int iD = -1;
-        public void generateChip()
+        public int generateChip()
         {
             this.iD++;
             ticketChip.Add(this.iD, new PaymentChip(this.iD));
+            return this.iD;
         }
     }
     public class DiscountMachine : Machine
