@@ -105,14 +105,18 @@ namespace CarParkSystem
 
         private void BtnPark_Click(object sender, EventArgs e)
         {
-            if (carpark.returnFloorArray()[currentFloor].spacesLeft() > 0)
+            if ((carpark.returnFloorArray()[currentFloor].spacesLeft() > 0)&&(currentCar != null))
             {
                 lblParkingError.Text = "";
                 carpark.returnFloorArray()[currentFloor].addCar();
                 carpark.getCar(currentCar.licenseString()).changeFloor(currentFloor);
+                currentCar = null;
                 updateFloors();
-
-
+                updateCarListBox();
+            }
+            else
+            {
+                lblParkingError.Text = "Cannot park";
 
             }
         }
