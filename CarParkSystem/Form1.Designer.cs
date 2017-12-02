@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbxFloors = new System.Windows.Forms.ListBox();
             this.lbxCarList = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblErrorText = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnNewCar = new System.Windows.Forms.Button();
@@ -45,12 +47,11 @@
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.lblErrorText = new System.Windows.Forms.Label();
-            this.lbxFloors = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.BtnPark = new System.Windows.Forms.Button();
+            this.btnDownFloor = new System.Windows.Forms.Button();
+            this.btnUpFloor = new System.Windows.Forms.Button();
+            this.lblParkingError = new System.Windows.Forms.Label();
+            this.lblCurrentCar = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -68,6 +69,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Floor space";
             // 
+            // lbxFloors
+            // 
+            this.lbxFloors.FormattingEnabled = true;
+            this.lbxFloors.Location = new System.Drawing.Point(6, 25);
+            this.lbxFloors.Name = "lbxFloors";
+            this.lbxFloors.Size = new System.Drawing.Size(188, 108);
+            this.lbxFloors.TabIndex = 1;
+            // 
             // lbxCarList
             // 
             this.lbxCarList.FormattingEnabled = true;
@@ -79,6 +88,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.lblCurrentCar);
             this.groupBox2.Controls.Add(this.lblErrorText);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
@@ -94,6 +104,15 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Car entry";
+            // 
+            // lblErrorText
+            // 
+            this.lblErrorText.AutoSize = true;
+            this.lblErrorText.Location = new System.Drawing.Point(87, 24);
+            this.lblErrorText.Name = "lblErrorText";
+            this.lblErrorText.Size = new System.Drawing.Size(71, 13);
+            this.lblErrorText.TabIndex = 10;
+            this.lblErrorText.Text = "License Plate";
             // 
             // label2
             // 
@@ -215,10 +234,10 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.button3);
-            this.groupBox5.Controls.Add(this.button10);
-            this.groupBox5.Controls.Add(this.button11);
+            this.groupBox5.Controls.Add(this.lblParkingError);
+            this.groupBox5.Controls.Add(this.BtnPark);
+            this.groupBox5.Controls.Add(this.btnDownFloor);
+            this.groupBox5.Controls.Add(this.btnUpFloor);
             this.groupBox5.Location = new System.Drawing.Point(218, 181);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(331, 163);
@@ -226,58 +245,53 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "In park";
             // 
-            // button3
+            // BtnPark
             // 
-            this.button3.Location = new System.Drawing.Point(6, 134);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Park";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnPark.Location = new System.Drawing.Point(6, 134);
+            this.BtnPark.Name = "BtnPark";
+            this.BtnPark.Size = new System.Drawing.Size(75, 23);
+            this.BtnPark.TabIndex = 4;
+            this.BtnPark.Text = "Park";
+            this.BtnPark.UseVisualStyleBackColor = true;
+            this.BtnPark.Click += new System.EventHandler(this.BtnPark_Click);
             // 
-            // button10
+            // btnDownFloor
             // 
-            this.button10.Location = new System.Drawing.Point(6, 48);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "go down floor";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnDownFloor.Location = new System.Drawing.Point(6, 48);
+            this.btnDownFloor.Name = "btnDownFloor";
+            this.btnDownFloor.Size = new System.Drawing.Size(75, 23);
+            this.btnDownFloor.TabIndex = 3;
+            this.btnDownFloor.Text = "go down floor";
+            this.btnDownFloor.UseVisualStyleBackColor = true;
+            this.btnDownFloor.Click += new System.EventHandler(this.btnDownFloor_Click);
             // 
-            // button11
+            // btnUpFloor
             // 
-            this.button11.Location = new System.Drawing.Point(6, 19);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 2;
-            this.button11.Text = "go up floor";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnUpFloor.Location = new System.Drawing.Point(6, 19);
+            this.btnUpFloor.Name = "btnUpFloor";
+            this.btnUpFloor.Size = new System.Drawing.Size(75, 23);
+            this.btnUpFloor.TabIndex = 2;
+            this.btnUpFloor.Text = "go up floor";
+            this.btnUpFloor.UseVisualStyleBackColor = true;
+            this.btnUpFloor.Click += new System.EventHandler(this.btnUpFloor_Click);
             // 
-            // lblErrorText
+            // lblParkingError
             // 
-            this.lblErrorText.AutoSize = true;
-            this.lblErrorText.Location = new System.Drawing.Point(87, 24);
-            this.lblErrorText.Name = "lblErrorText";
-            this.lblErrorText.Size = new System.Drawing.Size(71, 13);
-            this.lblErrorText.TabIndex = 10;
-            this.lblErrorText.Text = "License Plate";
+            this.lblParkingError.AutoSize = true;
+            this.lblParkingError.Location = new System.Drawing.Point(84, 24);
+            this.lblParkingError.Name = "lblParkingError";
+            this.lblParkingError.Size = new System.Drawing.Size(71, 13);
+            this.lblParkingError.TabIndex = 11;
+            this.lblParkingError.Text = "License Plate";
             // 
-            // lbxFloors
+            // lblCurrentCar
             // 
-            this.lbxFloors.FormattingEnabled = true;
-            this.lbxFloors.Location = new System.Drawing.Point(6, 25);
-            this.lbxFloors.Name = "lbxFloors";
-            this.lbxFloors.Size = new System.Drawing.Size(188, 108);
-            this.lbxFloors.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(87, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "License Plate";
+            this.lblCurrentCar.AutoSize = true;
+            this.lblCurrentCar.Location = new System.Drawing.Point(10, 136);
+            this.lblCurrentCar.Name = "lblCurrentCar";
+            this.lblCurrentCar.Size = new System.Drawing.Size(71, 13);
+            this.lblCurrentCar.TabIndex = 11;
+            this.lblCurrentCar.Text = "License Plate";
             // 
             // Form1
             // 
@@ -315,9 +329,9 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button BtnPark;
+        private System.Windows.Forms.Button btnDownFloor;
+        private System.Windows.Forms.Button btnUpFloor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNewCar;
@@ -325,7 +339,8 @@
         private System.Windows.Forms.TextBox tbxLicense;
         private System.Windows.Forms.Label lblErrorText;
         private System.Windows.Forms.ListBox lbxFloors;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblParkingError;
+        private System.Windows.Forms.Label lblCurrentCar;
     }
 }
 

@@ -13,10 +13,14 @@ namespace CarParkSystem
     public partial class Form1 : Form
     {
         Carpark carpark = new Carpark();
+        int currentFloor = 0;
+        Car currentCar;
         public Form1()
         {
             InitializeComponent();
             lblErrorText.Text = "";
+            lblParkingError.Text = "";
+            lblCurrentCar.Text = "";
             updateFloors();
         }
         public void updateCarListBox()
@@ -24,6 +28,7 @@ namespace CarParkSystem
             lbxCarList.Items.Clear();
             foreach (Car car in carpark.returnCarList())
             {
+
                 lbxCarList.Items.Add(car.licenseString());
             }
         }
@@ -32,9 +37,18 @@ namespace CarParkSystem
             lbxFloors.Items.Clear();
             for (int i = 0; i < carpark.returnNumOfFloor(); i++)
             {
-                int tempI = i + 1;
-                Floor floor = carpark.returnFloorArray()[i];
-                lbxFloors.Items.Add("Floor " + tempI + " has " + floor.spacesLeft() + " spaces left");
+                if (i == currentFloor)
+                {
+                    int tempI = i + 1;
+                    Floor floor = carpark.returnFloorArray()[i];
+                    lbxFloors.Items.Add("Floor " + tempI + " has " + floor.spacesLeft() + " spaces left : Current");
+                }
+                else
+                {
+                    int tempI = i + 1;
+                    Floor floor = carpark.returnFloorArray()[i];
+                    lbxFloors.Items.Add("Floor " + tempI + " has " + floor.spacesLeft() + " spaces left");
+                }
             }
         }
 
@@ -49,10 +63,57 @@ namespace CarParkSystem
                 tbxLicense.Text = "";
                 tbxPassCode.Text = "";
                 updateCarListBox();
+                currentCar = carpark.getCar(license);
+                lblCurrentCar.Text = "Current cars license plate:"+license;
+
             }
             else
             {
                 lblErrorText.Text = "Enter information";
+            }
+        }
+
+        private void btnUpFloor_Click(object sender, EventArgs e)
+        {
+            if (currentFloor < carpark.returnNumOfFloor()-1)
+            {
+                currentFloor++;
+                lblParkingError.Text = "";                
+            }
+            else
+            {
+                lblParkingError.Text = "Already at highest floor";
+            }
+            updateFloors();
+        }
+
+        private void btnDownFloor_Click(object sender, EventArgs e)
+        {
+            if (currentFloor > 0)
+            {
+                currentFloor--;
+                lblParkingError.Text = "";
+            }
+            else
+            {
+                lblParkingError.Text = "Already at lowest floor";
+            }
+            updateFloors();
+
+
+        }
+
+        private void BtnPark_Click(object sender, EventArgs e)
+        {
+            if (carpark.returnFloorArray()[currentFloor].spacesLeft() > 0)
+            {
+                lblParkingError.Text = "";
+                carpark.returnFloorArray()[currentFloor].addCar();
+                carpark.getCar(currentCar.licenseString()).changeFloor(currentFloor);
+                updateFloors();
+
+
+
             }
         }
     }
