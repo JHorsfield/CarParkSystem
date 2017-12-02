@@ -50,6 +50,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.lblErrorText = new System.Windows.Forms.Label();
             this.lbxFloors = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -214,6 +215,7 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.button3);
             this.groupBox5.Controls.Add(this.button10);
             this.groupBox5.Controls.Add(this.button11);
@@ -268,6 +270,15 @@
             this.lbxFloors.Size = new System.Drawing.Size(188, 108);
             this.lbxFloors.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(87, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "License Plate";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +296,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -313,6 +325,7 @@
         private System.Windows.Forms.TextBox tbxLicense;
         private System.Windows.Forms.Label lblErrorText;
         private System.Windows.Forms.ListBox lbxFloors;
+        private System.Windows.Forms.Label label3;
     }
 }
 

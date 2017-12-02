@@ -22,8 +22,8 @@ namespace CarParkSystem
     }
     public class Carpark
     {
-        private const int maxSpaces = 600;//make this generatable and linked to the other maxSpaces
-        private const int numOfFloors = 4;
+        public const int maxSpaces = 600;
+        public const int numOfFloors = 4;
 
         private List<Car> carList { get; set; }
         private Floor[] floor { get; set; }
@@ -38,6 +38,10 @@ namespace CarParkSystem
         public Carpark()
         {
             floor = new Floor[numOfFloors];
+            for (int i = 0; i < numOfFloors; i++)
+            {
+                floor[i] = new Floor();
+            }
             carList = new List<Car>();
 
             enterance = new Enterance();
@@ -51,10 +55,18 @@ namespace CarParkSystem
         {
             return (carList);
         }
+        public Floor[] returnFloorArray()
+        {
+            return (floor);
+        }
+        public int returnNumOfFloor()
+        {
+            return (numOfFloors);
+        }
     }
     public class Floor
     {
-        private  int maxCarsPerFloor = 50;
+        private int maxCarsPerFloor = 50;
         private int currentNumCars = 0;
         public void addCar()
         {

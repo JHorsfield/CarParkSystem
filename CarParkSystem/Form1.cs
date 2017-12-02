@@ -17,6 +17,7 @@ namespace CarParkSystem
         {
             InitializeComponent();
             lblErrorText.Text = "";
+            updateFloors();
         }
         public void updateCarListBox()
         {
@@ -24,6 +25,16 @@ namespace CarParkSystem
             foreach (Car car in carpark.returnCarList())
             {
                 lbxCarList.Items.Add(car.licenseString());
+            }
+        }
+        public void updateFloors()
+        {
+            lbxFloors.Items.Clear();
+            for (int i = 0; i < carpark.returnNumOfFloor(); i++)
+            {
+                int tempI = i + 1;
+                Floor floor = carpark.returnFloorArray()[i];
+                lbxFloors.Items.Add("Floor " + tempI + " has " + floor.spacesLeft() + " spaces left");
             }
         }
 
