@@ -30,9 +30,15 @@ namespace CarParkSystem
         {
             lbxCarList.Items.Clear();
             foreach (Car car in carpark.returnCarList())
-            {
-
-                lbxCarList.Items.Add(car.licenseString());
+            {              
+                if (car.getCoinId() != 0)
+                {
+                    lbxCarList.Items.Add(car.licenseString()+" : unpaid Coin");
+                }
+                else
+                {
+                    lbxCarList.Items.Add(car.licenseString() + " : paided");
+                }
             }
         }
         public void updateFloors()
