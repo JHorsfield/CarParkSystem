@@ -46,22 +46,21 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblpay = new System.Windows.Forms.Label();
+            this.btnPayment = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblParkingError = new System.Windows.Forms.Label();
             this.BtnPark = new System.Windows.Forms.Button();
             this.btnDownFloor = new System.Windows.Forms.Button();
             this.btnUpFloor = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
-            this.btnFowardTime = new System.Windows.Forms.Button();
-            this.btnBackTime = new System.Windows.Forms.Button();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.timeTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblTimeDia = new System.Windows.Forms.Label();
+            this.lblpay = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.discountTxt)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -220,10 +219,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lblTimeDia);
-            this.groupBox4.Controls.Add(this.lblTime);
-            this.groupBox4.Controls.Add(this.btnBackTime);
-            this.groupBox4.Controls.Add(this.btnFowardTime);
+            this.groupBox4.Controls.Add(this.lblpay);
             this.groupBox4.Controls.Add(this.btnPayment);
             this.groupBox4.Location = new System.Drawing.Point(555, 12);
             this.groupBox4.Name = "groupBox4";
@@ -231,6 +227,25 @@
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Payment and other externals";
+            // 
+            // lblpay
+            // 
+            this.lblpay.AutoSize = true;
+            this.lblpay.Location = new System.Drawing.Point(6, 452);
+            this.lblpay.Name = "lblpay";
+            this.lblpay.Size = new System.Drawing.Size(35, 13);
+            this.lblpay.TabIndex = 1;
+            this.lblpay.Text = "label3";
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.Location = new System.Drawing.Point(6, 468);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(75, 23);
+            this.btnPayment.TabIndex = 0;
+            this.btnPayment.Text = "Pay for stay";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // groupBox5
             // 
@@ -285,58 +300,26 @@
             this.btnUpFloor.UseVisualStyleBackColor = true;
             this.btnUpFloor.Click += new System.EventHandler(this.btnUpFloor_Click);
             // 
-            // btnPayment
+            // discountBtn
             // 
-            this.btnPayment.Location = new System.Drawing.Point(6, 468);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(75, 23);
-            this.btnPayment.TabIndex = 0;
-            this.btnPayment.Text = "Pay for stay";
-            this.btnPayment.UseVisualStyleBackColor = true;
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            this.discountBtn.Location = new System.Drawing.Point(6, 43);
+            this.discountBtn.Name = "discountBtn";
+            this.discountBtn.Size = new System.Drawing.Size(88, 21);
+            this.discountBtn.TabIndex = 2;
+            this.discountBtn.Text = "Apply Discount";
+            this.discountBtn.UseVisualStyleBackColor = true;
+            this.discountBtn.Click += new System.EventHandler(this.discountBtn_Click);
             // 
-            // btnFowardTime
+            // discountTxt
             // 
-            this.btnFowardTime.Location = new System.Drawing.Point(258, 199);
-            this.btnFowardTime.Name = "btnFowardTime";
-            this.btnFowardTime.Size = new System.Drawing.Size(75, 23);
-            this.btnFowardTime.TabIndex = 2;
-            this.btnFowardTime.Text = "time++";
-            this.btnFowardTime.UseVisualStyleBackColor = true;
-            this.btnFowardTime.Click += new System.EventHandler(this.btnFowardTime_Click);
+            // lblpay
             // 
-            // btnBackTime
-            // 
-            this.btnBackTime.Location = new System.Drawing.Point(258, 243);
-            this.btnBackTime.Name = "btnBackTime";
-            this.btnBackTime.Size = new System.Drawing.Size(75, 23);
-            this.btnBackTime.TabIndex = 3;
-            this.btnBackTime.Text = "time--";
-            this.btnBackTime.UseVisualStyleBackColor = true;
-            this.btnBackTime.Click += new System.EventHandler(this.btnBackTime_Click);
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(255, 227);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(35, 13);
-            this.lblTime.TabIndex = 4;
-            this.lblTime.Text = "label3";
-            // 
-            // timeTimer
-            // 
-            this.timeTimer.Enabled = true;
-            this.timeTimer.Interval = 1000;
-            this.timeTimer.Tick += new System.EventHandler(this.timeTimer_Tick);
-            // 
-            // lblTimeDia
-            // 
-            this.lblTimeDia.AutoSize = true;
-            this.lblTimeDia.Location = new System.Drawing.Point(162, 244);
-            this.lblTimeDia.Name = "lblTimeDia";
-            this.lblTimeDia.Size = new System.Drawing.Size(0, 13);
-            this.lblTimeDia.TabIndex = 5;
+            this.lblpay.AutoSize = true;
+            this.lblpay.Location = new System.Drawing.Point(6, 452);
+            this.lblpay.Name = "lblpay";
+            this.lblpay.Size = new System.Drawing.Size(35, 13);
+            this.lblpay.TabIndex = 1;
+            this.lblpay.Text = "label3";
             // 
             // Form1
             // 
@@ -358,6 +341,7 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.discountTxt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,11 +371,7 @@
         private System.Windows.Forms.Label lblParkingError;
         private System.Windows.Forms.Label lblCurrentCar;
         private System.Windows.Forms.Button btnPayment;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Button btnBackTime;
-        private System.Windows.Forms.Button btnFowardTime;
-        private System.Windows.Forms.Timer timeTimer;
-        private System.Windows.Forms.Label lblTimeDia;
+        private System.Windows.Forms.Label lblpay;
     }
 }
 
