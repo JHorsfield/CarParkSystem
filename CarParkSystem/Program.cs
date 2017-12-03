@@ -170,11 +170,20 @@ namespace CarParkSystem
         }
         public void applyDiscount(int discount)
         {
+            double dc = discount / 100;
             this.discount += discount;
+            if(this.discount>1)
+            {
+                this.discount = 1;
+            }
         }
         public int getId()
         {
             return (iD);
+        }
+        public DateTime returnStartTime()
+        {
+            return startTime;
         }
     }
     public class Car
