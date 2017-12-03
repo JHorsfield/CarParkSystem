@@ -31,7 +31,7 @@ namespace CarParkSystem
             lbxCarList.Items.Clear();
             foreach (Car car in carpark.returnCarList())
             {              
-                if (car.getCoinId() != 0)
+                if (car.getCoinId() == 0)
                 {
                     lbxCarList.Items.Add(car.licenseString()+" : unpaid Coin");
                 }
@@ -147,6 +147,14 @@ namespace CarParkSystem
             currentChip = carpark.GetChipMachine().getTicketChip()[currentId];
             button2.Enabled = false;
             btnNewCar.Enabled = true;
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            string licenseInput = lbxCarList.SelectedItem.ToString();
+            string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
+            lblpay.Text = licensePlate;
+
         }
     }
 
