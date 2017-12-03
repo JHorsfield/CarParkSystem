@@ -154,13 +154,13 @@ namespace CarParkSystem
         {
             string licenseInput = lbxCarList.SelectedItem.ToString();
             string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
-            lblpay.Text = licensePlate;
+            lblpayneeded.Text = licensePlate;
 
             int coinId = carpark.getCar(licensePlate).getCoinId();
             DateTime techincallyNow = DateTime.Now.AddHours(timeDilation);
             TimeSpan timeSpent = techincallyNow - carpark.GetChipMachine().getTicketChip()[coinId].returnStartTime();
             int hoursSpent = timeSpent.Hours;
-            lblToPay.Text = hoursSpent.ToString();
+            //lblToPay.Text = hoursSpent.ToString();
 
 
 
@@ -179,15 +179,15 @@ namespace CarParkSystem
         private void timeTimer_Tick(object sender, EventArgs e)
         {
             DateTime currentDate = DateTime.Now.AddHours(timeDilation);
-            lblTime.Text = currentDate.ToString("HH:mm");
+            //lblTime.Text = currentDate.ToString("HH:mm");
         }
 
         private void discountBtn_Click(object sender, EventArgs e)
         {
-            int discount = int.Parse(discountTxt.Text);
-            string licenseInput = lbxCarList.SelectedItem.ToString();
-            string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
-            carpark.getDiscountMachine().addDiscount(discount, (carpark.getCar(licensePlate).getCoinId()));
+        //    //int discount = int.Parse(discountTxt.Text);
+        //    string licenseInput = lbxCarList.SelectedItem.ToString();
+        //    string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
+        //    carpark.getDiscountMachine().addDiscount(discount, (carpark.getCar(licensePlate).getCoinId()));
         }
     }
 
