@@ -162,7 +162,20 @@ namespace CarParkSystem
             int hoursSpent = timeSpent.Hours;
             //lblToPay.Text = hoursSpent.ToString();
 
+            float payment;
+            float discount = carpark.GetChipMachine().getTicketChip()[coinId].returnDiscount() +1;
+            payment = hoursSpent * 2 * discount;
 
+            DialogResult YesOrNo = MessageBox.Show("£" + payment + " due would you like to pay now?", "Payment", MessageBoxButtons.YesNo);
+            if (YesOrNo == DialogResult.Yes)
+            {
+                carpark.getCar(licensePlate).removeCoin();
+                
+            }
+
+
+
+            updateCarListBox();
 
         }
 
@@ -206,6 +219,14 @@ namespace CarParkSystem
         {
             DateTime currentDate = DateTime.Now.AddHours(timeDilation);
             lblTimer.Text = currentDate.ToString("HH:mm");
+        }
+
+        private void btnApplyDiscount_Click(object sender, EventArgs e)
+        {
+            int discount = int.Parse(nudDiscountAmount.Text);
+            string licenseInput = lbxCarList.SelectedItem.ToString();
+            string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
+            carpark.getDiscountMachine().addDiscount(discount, (carpark.getCar(licensePlate).getCoinId()));
         }
     }
 

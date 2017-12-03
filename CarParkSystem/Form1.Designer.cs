@@ -57,11 +57,14 @@
             this.btnDownFloor = new System.Windows.Forms.Button();
             this.btnUpFloor = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.nudDiscountAmount = new System.Windows.Forms.NumericUpDown();
+            this.btnApplyDiscount = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -220,6 +223,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnApplyDiscount);
+            this.groupBox4.Controls.Add(this.nudDiscountAmount);
             this.groupBox4.Controls.Add(this.lblTimer);
             this.groupBox4.Controls.Add(this.btnHourBackwards);
             this.groupBox4.Controls.Add(this.btnHourFoward);
@@ -272,7 +277,7 @@
             // 
             // btnPaymentneeded
             // 
-            this.btnPaymentneeded.Location = new System.Drawing.Point(121, 380);
+            this.btnPaymentneeded.Location = new System.Drawing.Point(6, 468);
             this.btnPaymentneeded.Name = "btnPaymentneeded";
             this.btnPaymentneeded.Size = new System.Drawing.Size(75, 23);
             this.btnPaymentneeded.TabIndex = 0;
@@ -339,6 +344,23 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // nudDiscountAmount
+            // 
+            this.nudDiscountAmount.Location = new System.Drawing.Point(233, 442);
+            this.nudDiscountAmount.Name = "nudDiscountAmount";
+            this.nudDiscountAmount.Size = new System.Drawing.Size(120, 20);
+            this.nudDiscountAmount.TabIndex = 5;
+            // 
+            // btnApplyDiscount
+            // 
+            this.btnApplyDiscount.Location = new System.Drawing.Point(278, 468);
+            this.btnApplyDiscount.Name = "btnApplyDiscount";
+            this.btnApplyDiscount.Size = new System.Drawing.Size(75, 23);
+            this.btnApplyDiscount.TabIndex = 6;
+            this.btnApplyDiscount.Text = "Apply Discount";
+            this.btnApplyDiscount.UseVisualStyleBackColor = true;
+            this.btnApplyDiscount.Click += new System.EventHandler(this.btnApplyDiscount_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,6 +381,7 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,6 +416,8 @@
         private System.Windows.Forms.Button btnHourBackwards;
         private System.Windows.Forms.Button btnHourFoward;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnApplyDiscount;
+        private System.Windows.Forms.NumericUpDown nudDiscountAmount;
     }
 }
 

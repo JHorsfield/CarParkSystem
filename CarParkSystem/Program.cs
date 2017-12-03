@@ -162,16 +162,17 @@ namespace CarParkSystem
     {
         private int iD { get; }
         public DateTime startTime { get; }
-        private int discount { get; set; }
+        private float discount { get; set; }
         public PaymentChip(int iD)
         {
             this.iD = iD;
+            discount = 0;
             startTime = DateTime.Now;
         }
         public void applyDiscount(int discount)
         {
-            double dc = discount / 100;
-            this.discount += discount;
+            float dc = discount / 100;
+            this.discount += dc;
             if(this.discount>1)
             {
                 this.discount = 1;
@@ -184,6 +185,10 @@ namespace CarParkSystem
         public DateTime returnStartTime()
         {
             return startTime;
+        }
+        public float returnDiscount()
+        {
+            return discount;
         }
     }
     public class Car
@@ -215,6 +220,11 @@ namespace CarParkSystem
         public int getCoinId()
         {
             return coinId;
+        }
+        public void removeCoin()
+        {
+            coinId = 0;
+            
         }
     }
 }
