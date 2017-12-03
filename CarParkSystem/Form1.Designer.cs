@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbxFloors = new System.Windows.Forms.ListBox();
             this.lbxCarList = new System.Windows.Forms.ListBox();
@@ -45,6 +46,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblTimer = new System.Windows.Forms.Label();
+            this.btnHourBackwards = new System.Windows.Forms.Button();
+            this.btnHourFoward = new System.Windows.Forms.Button();
             this.lblpayneeded = new System.Windows.Forms.Label();
             this.btnPaymentneeded = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -52,6 +56,7 @@
             this.BtnPark = new System.Windows.Forms.Button();
             this.btnDownFloor = new System.Windows.Forms.Button();
             this.btnUpFloor = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -215,6 +220,9 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lblTimer);
+            this.groupBox4.Controls.Add(this.btnHourBackwards);
+            this.groupBox4.Controls.Add(this.btnHourFoward);
             this.groupBox4.Controls.Add(this.lblpayneeded);
             this.groupBox4.Controls.Add(this.btnPaymentneeded);
             this.groupBox4.Location = new System.Drawing.Point(555, 12);
@@ -223,6 +231,35 @@
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Payment and other externals";
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Location = new System.Drawing.Point(318, 219);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(35, 13);
+            this.lblTimer.TabIndex = 4;
+            this.lblTimer.Text = "label3";
+            // 
+            // btnHourBackwards
+            // 
+            this.btnHourBackwards.Location = new System.Drawing.Point(278, 235);
+            this.btnHourBackwards.Name = "btnHourBackwards";
+            this.btnHourBackwards.Size = new System.Drawing.Size(75, 23);
+            this.btnHourBackwards.TabIndex = 3;
+            this.btnHourBackwards.Text = "Time--";
+            this.btnHourBackwards.UseVisualStyleBackColor = true;
+            this.btnHourBackwards.Click += new System.EventHandler(this.btnHourBackwards_Click);
+            // 
+            // btnHourFoward
+            // 
+            this.btnHourFoward.Location = new System.Drawing.Point(278, 193);
+            this.btnHourFoward.Name = "btnHourFoward";
+            this.btnHourFoward.Size = new System.Drawing.Size(75, 23);
+            this.btnHourFoward.TabIndex = 2;
+            this.btnHourFoward.Text = "Time++";
+            this.btnHourFoward.UseVisualStyleBackColor = true;
+            this.btnHourFoward.Click += new System.EventHandler(this.btnHourFoward_Click);
             // 
             // lblpayneeded
             // 
@@ -296,6 +333,12 @@
             this.btnUpFloor.UseVisualStyleBackColor = true;
             this.btnUpFloor.Click += new System.EventHandler(this.btnUpFloor_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +389,10 @@
         private System.Windows.Forms.Label lblCurrentCar;
         private System.Windows.Forms.Button btnPaymentneeded;
         private System.Windows.Forms.Label lblpayneeded;
+        private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Button btnHourBackwards;
+        private System.Windows.Forms.Button btnHourFoward;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

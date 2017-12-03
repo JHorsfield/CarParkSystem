@@ -168,18 +168,18 @@ namespace CarParkSystem
 
         private void btnBackTime_Click(object sender, EventArgs e)
         {
-            timeDilation--;
+
         }
 
         private void btnFowardTime_Click(object sender, EventArgs e)
         {
-            timeDilation++;
+
         }
 
         private void timeTimer_Tick(object sender, EventArgs e)
         {
-            DateTime currentDate = DateTime.Now.AddHours(timeDilation);
-            //lblTime.Text = currentDate.ToString("HH:mm");
+
+            
         }
 
         private void discountBtn_Click(object sender, EventArgs e)
@@ -188,6 +188,24 @@ namespace CarParkSystem
         //    string licenseInput = lbxCarList.SelectedItem.ToString();
         //    string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
         //    carpark.getDiscountMachine().addDiscount(discount, (carpark.getCar(licensePlate).getCoinId()));
+        }
+
+        private void btnHourFoward_Click(object sender, EventArgs e)
+        {
+            timeDilation++;
+
+        }
+
+        private void btnHourBackwards_Click(object sender, EventArgs e)
+        {
+            timeDilation--;
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime currentDate = DateTime.Now.AddHours(timeDilation);
+            lblTimer.Text = currentDate.ToString("HH:mm");
         }
     }
 
