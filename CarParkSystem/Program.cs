@@ -70,6 +70,10 @@ namespace CarParkSystem
         {
             return chipMachine;
         }
+        public DiscountMachine getDiscountMachine()
+        {
+            return discountMachine;
+        }
 
     }
     public class Floor
