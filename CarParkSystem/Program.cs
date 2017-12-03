@@ -167,6 +167,7 @@ namespace CarParkSystem
         {
             this.iD = iD;
             startTime = DateTime.Now;
+            discount = 0;
         }
         public void applyDiscount(int discount)
         {
