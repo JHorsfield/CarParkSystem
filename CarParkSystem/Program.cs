@@ -70,6 +70,10 @@ namespace CarParkSystem
         {
             return chipMachine;
         }
+        public DiscountMachine getDiscountMachine()
+        {
+            return discountMachine;
+        }
 
     }
     public class Floor
@@ -166,7 +170,12 @@ namespace CarParkSystem
         }
         public void applyDiscount(int discount)
         {
+            double dc = discount / 100;
             this.discount += discount;
+            if(this.discount>1)
+            {
+                this.discount = 1;
+            }
         }
         public int getId()
         {
