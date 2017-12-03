@@ -16,6 +16,7 @@ namespace CarParkSystem
         int currentFloor = 0;
         Car currentCar;
         PaymentChip currentChip;
+        int timeDilation;
 
         public Form1()
         {
@@ -155,6 +156,30 @@ namespace CarParkSystem
             string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
             lblpay.Text = licensePlate;
 
+            int coinId = carpark.getCar(licensePlate).getCoinId();
+            DateTime techincallyNow = DateTime.Now.AddHours(timeDilation);
+            TimeSpan timeSpent = techincallyNow - carpark.GetChipMachine().getTicketChip()[coinId].returnStartTime();
+            int hoursSpent = timeSpent.Hours;
+            lblToPay.Text = hoursSpent.ToString();
+
+
+
+        }
+
+        private void btnBackTime_Click(object sender, EventArgs e)
+        {
+            timeDilation--;
+        }
+
+        private void btnFowardTime_Click(object sender, EventArgs e)
+        {
+            timeDilation++;
+        }
+
+        private void timeTimer_Tick(object sender, EventArgs e)
+        {
+            DateTime currentDate = DateTime.Now.AddHours(timeDilation);
+            lblTime.Text = currentDate.ToString("HH:mm");
         }
     }
 

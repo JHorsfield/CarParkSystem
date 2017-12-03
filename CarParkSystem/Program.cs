@@ -172,6 +172,10 @@ namespace CarParkSystem
         {
             return (iD);
         }
+        public DateTime returnStartTime()
+        {
+            return startTime;
+        }
     }
     public class Car
     {
