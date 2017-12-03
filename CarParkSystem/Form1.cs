@@ -156,6 +156,14 @@ namespace CarParkSystem
             lblpay.Text = licensePlate;
 
         }
+
+        private void discountBtn_Click(object sender, EventArgs e)
+        {
+            int discount = int.Parse(discountTxt.Text);
+            string licenseInput = lbxCarList.SelectedItem.ToString();
+            string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
+            carpark.getDiscountMachine().addDiscount(discount, (carpark.getCar(licensePlate).getCoinId()));
+        }
     }
 
 }
