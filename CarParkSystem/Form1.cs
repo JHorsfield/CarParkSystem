@@ -230,7 +230,7 @@ namespace CarParkSystem
             int coinId = carpark.getCar(licensePlate).getCoinId();
 
             carpark.getDiscountMachine().addDiscount(discount, coinId);
-            float dcTmp = carpark.getDiscountMachine().getTicketChip()[coinId].returnDiscount();
+            float dcTmp = 100*carpark.getDiscountMachine().getTicketChip()[coinId].returnDiscount();
             dcLbl.Text = dcTmp.ToString();
         }
 

@@ -174,7 +174,7 @@ namespace CarParkSystem
         }
         public void applyDiscount(int discount)
         {
-            float dc = discount / 100;
+            float dc = (float)discount / 100;
             this.discount += dc;
             if(this.discount>1)
             {
