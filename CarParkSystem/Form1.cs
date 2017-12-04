@@ -32,7 +32,7 @@ namespace CarParkSystem
             lbxCarList.Items.Clear();
             foreach (Car car in carpark.returnCarList())
             {              
-                if (car.getCoinId() == 0)
+                if (car.getCoinId() != -1)
                 {
                     lbxCarList.Items.Add(car.licenseString()+" : unpaid Coin");
                 }
@@ -198,10 +198,6 @@ namespace CarParkSystem
 
         private void discountBtn_Click(object sender, EventArgs e)
         {
-        //    //int discount = int.Parse(discountTxt.Text);
-        //    string licenseInput = lbxCarList.SelectedItem.ToString();
-        //    string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
-        //    carpark.getDiscountMachine().addDiscount(discount, (carpark.getCar(licensePlate).getCoinId()));
         }
 
         private void btnHourFoward_Click(object sender, EventArgs e)
@@ -236,6 +232,41 @@ namespace CarParkSystem
 
         private void dcLbl_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            string licenseInput = lbxCarList.SelectedItem.ToString();
+            string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
+
+            string neededPassCode = carpark.getCar(licensePlate).returnPassCode();
+            string givenPassCode = tbxExitPass.Text;
+
+            if (neededPassCode == givenPassCode)
+            {
+                int coinId = carpark.getCar(licensePlate).getCoinId();
+                if (coinId == -1)
+                {
+                    int floor = carpark.getCar(licensePlate).returnFloor();
+
+                    carpark.returnFloorArray()[floor].removeCar();
+                    carpark.killCar(licensePlate);
+
+                    updateCarListBox();
+                    updateFloors();
+
+                }
+                else
+                {
+                    MessageBox.Show("Please pay for your ticket");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Wrong Passcode");
+            }
+
 
         }
     }

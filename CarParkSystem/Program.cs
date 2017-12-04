@@ -50,6 +50,11 @@ namespace CarParkSystem
         {
             enterance.addNewCar(carList, licensePlate, passcode,id);
         }
+        public void killCar( string licensePlate)
+        {
+            Car deadCar = carList.Find(item => item.licenseString() == licensePlate);
+            exit.removeCar(carList,deadCar);
+        }
         public List<Car> returnCarList()
         {
             return (carList);
@@ -226,8 +231,15 @@ namespace CarParkSystem
         }
         public void removeCoin()
         {
-            coinId = -1;
-            
+            coinId = -1;            
+        }
+        public string returnPassCode()
+        {
+            return passCode;
+        }
+        public int returnFloor()
+        {
+            return floor;
         }
     }
 }

@@ -42,10 +42,10 @@
             this.tbxLicense = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dcLbl = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnApplyDiscount = new System.Windows.Forms.Button();
             this.nudDiscountAmount = new System.Windows.Forms.NumericUpDown();
             this.lblTimer = new System.Windows.Forms.Label();
@@ -59,8 +59,7 @@
             this.btnDownFloor = new System.Windows.Forms.Button();
             this.btnUpFloor = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.dcLbl = new System.Windows.Forms.Label();
+            this.tbxExitPass = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -186,9 +185,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.tbxExitPass);
+            this.groupBox3.Controls.Add(this.btnExit);
             this.groupBox3.Location = new System.Drawing.Point(218, 350);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(331, 163);
@@ -196,32 +194,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Car Exit";
             // 
-            // button8
+            // btnExit
             // 
-            this.button8.Location = new System.Drawing.Point(168, 19);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Exit";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(87, 19);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Return Coin";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(6, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Unpark";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(6, 19);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // groupBox4
             // 
@@ -240,6 +221,25 @@
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Payment and other externals";
+            // 
+            // dcLbl
+            // 
+            this.dcLbl.AutoSize = true;
+            this.dcLbl.Location = new System.Drawing.Point(288, 426);
+            this.dcLbl.Name = "dcLbl";
+            this.dcLbl.Size = new System.Drawing.Size(13, 13);
+            this.dcLbl.TabIndex = 8;
+            this.dcLbl.Text = "0";
+            this.dcLbl.Click += new System.EventHandler(this.dcLbl_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(195, 426);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Current Discount";
             // 
             // btnApplyDiscount
             // 
@@ -365,24 +365,12 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label3
+            // tbxExitPass
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(195, 426);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Current Discount";
-            // 
-            // dcLbl
-            // 
-            this.dcLbl.AutoSize = true;
-            this.dcLbl.Location = new System.Drawing.Point(288, 426);
-            this.dcLbl.Name = "dcLbl";
-            this.dcLbl.Size = new System.Drawing.Size(13, 13);
-            this.dcLbl.TabIndex = 8;
-            this.dcLbl.Text = "0";
-            this.dcLbl.Click += new System.EventHandler(this.dcLbl_Click);
+            this.tbxExitPass.Location = new System.Drawing.Point(6, 48);
+            this.tbxExitPass.Name = "tbxExitPass";
+            this.tbxExitPass.Size = new System.Drawing.Size(100, 20);
+            this.tbxExitPass.TabIndex = 12;
             // 
             // Form1
             // 
@@ -400,6 +388,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).EndInit();
@@ -417,9 +406,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button BtnPark;
         private System.Windows.Forms.Button btnDownFloor;
@@ -443,6 +430,7 @@
         private System.Windows.Forms.NumericUpDown nudDiscountAmount;
         private System.Windows.Forms.Label dcLbl;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbxExitPass;
     }
 }
 
