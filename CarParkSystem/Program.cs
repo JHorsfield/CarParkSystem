@@ -226,7 +226,7 @@ namespace CarParkSystem
         }
         public void removeCoin()
         {
-            coinId = 0;
+            coinId = -1;
             
         }
     }
