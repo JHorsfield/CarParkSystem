@@ -28,7 +28,7 @@ namespace CarParkSystem
             btnDownFloor.Enabled = false;
             btnUpFloor.Enabled = false;
             BtnPark.Enabled = false;
-            button8.Enabled = false;
+            btnExit.Enabled = false;
             btnPaymentneeded.Enabled = false;
             btnApplyDiscount.Enabled = false;
             updateFloors();
@@ -89,7 +89,7 @@ namespace CarParkSystem
                     btnDownFloor.Enabled = true;
                     btnUpFloor.Enabled = true;
                     BtnPark.Enabled = true;
-                    button8.Enabled = true;
+                    btnExit.Enabled = true;
                     btnPaymentneeded.Enabled = true;
                     btnApplyDiscount.Enabled = true;
                 }
