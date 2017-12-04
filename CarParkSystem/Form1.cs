@@ -170,8 +170,8 @@ namespace CarParkSystem
             DialogResult YesOrNo = MessageBox.Show("£" + payment + " due would you like to pay now?", "Payment", MessageBoxButtons.YesNo);
             if (YesOrNo == DialogResult.Yes)
             {
+                carpark.getDiscountMachine().getTicketChip().Remove(coinId);
                 carpark.getCar(licensePlate).removeCoin();
-                
             }
 
 
