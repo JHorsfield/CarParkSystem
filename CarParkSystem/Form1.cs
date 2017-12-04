@@ -227,7 +227,16 @@ namespace CarParkSystem
             int discount = int.Parse(nudDiscountAmount.Text);
             string licenseInput = lbxCarList.SelectedItem.ToString();
             string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
-            carpark.getDiscountMachine().addDiscount(discount, (carpark.getCar(licensePlate).getCoinId()));
+            int coinId = carpark.getCar(licensePlate).getCoinId();
+
+            carpark.getDiscountMachine().addDiscount(discount, coinId);
+            float dcTmp = carpark.getDiscountMachine().getTicketChip()[coinId].returnDiscount();
+            dcLbl.Text = dcTmp.ToString();
+        }
+
+        private void dcLbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

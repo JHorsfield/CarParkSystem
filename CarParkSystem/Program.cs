@@ -44,6 +44,7 @@ namespace CarParkSystem
             enterance = new Enterance();
             exit = new Exit();
             chipMachine = new ChipMachine();
+            discountMachine = new DiscountMachine();
         }
         public void newCar(string licensePlate, string passcode,int id)
         {
