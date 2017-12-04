@@ -134,6 +134,7 @@ namespace CarParkSystem
         {
             this.iD++;
             ticketChip.Add(this.iD, new PaymentChip(this.iD));
+            Dictionary<int, PaymentChip> temp = ticketChip;
             return this.iD;
         }
     }

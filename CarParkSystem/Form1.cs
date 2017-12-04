@@ -78,7 +78,8 @@ namespace CarParkSystem
                     updateCarListBox();
                     currentCar = carpark.getCar(license);
                     lblCurrentCar.Text = "Current cars license plate:" + license;
-
+                    button2.Enabled = true;
+                    btnNewCar.Enabled = false;
                 }
                 else
                 {
