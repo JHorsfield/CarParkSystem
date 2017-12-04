@@ -25,6 +25,12 @@ namespace CarParkSystem
             lblParkingError.Text = "";
             lblCurrentCar.Text = "";
             btnNewCar.Enabled = false;
+            btnDownFloor.Enabled = false;
+            btnUpFloor.Enabled = false;
+            BtnPark.Enabled = false;
+            button8.Enabled = false;
+            btnPaymentneeded.Enabled = false;
+            btnApplyDiscount.Enabled = false;
             updateFloors();
         }
         public void updateCarListBox()
@@ -80,6 +86,12 @@ namespace CarParkSystem
                     lblCurrentCar.Text = "Current cars license plate:" + license;
                     button2.Enabled = true;
                     btnNewCar.Enabled = false;
+                    btnDownFloor.Enabled = true;
+                    btnUpFloor.Enabled = true;
+                    BtnPark.Enabled = true;
+                    button8.Enabled = true;
+                    btnPaymentneeded.Enabled = true;
+                    btnApplyDiscount.Enabled = true;
                 }
                 else
                 {
@@ -125,7 +137,7 @@ namespace CarParkSystem
 
         private void BtnPark_Click(object sender, EventArgs e)
         {
-            if ((carpark.returnFloorArray()[currentFloor].spacesLeft() > 0)&&(currentCar != null))
+            if ((carpark.returnFloorArray()[currentFloor].spacesLeft() > 0) && (currentCar != null))
             {
                 lblParkingError.Text = "";
                 carpark.returnFloorArray()[currentFloor].addCar();
@@ -133,8 +145,6 @@ namespace CarParkSystem
                 currentCar = null;
                 updateFloors();
                 updateCarListBox();
-                btnDownFloor.Enabled = false;
-                btnUpFloor.Enabled = false;
             }
             else
             {
@@ -235,6 +245,11 @@ namespace CarParkSystem
         }
 
         private void dcLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
         {
 
         }
