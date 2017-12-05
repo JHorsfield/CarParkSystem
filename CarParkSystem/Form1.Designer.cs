@@ -68,6 +68,7 @@
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -385,7 +386,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Location = new System.Drawing.Point(761, 12);
+            this.groupBox6.Location = new System.Drawing.Point(555, 181);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(200, 163);
             this.groupBox6.TabIndex = 7;
@@ -403,7 +404,7 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Location = new System.Drawing.Point(555, 181);
+            this.groupBox8.Location = new System.Drawing.Point(761, 181);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(200, 163);
             this.groupBox8.TabIndex = 7;
@@ -422,7 +423,7 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Location = new System.Drawing.Point(761, 181);
+            this.groupBox10.Location = new System.Drawing.Point(761, 350);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(200, 163);
             this.groupBox10.TabIndex = 8;
@@ -456,11 +457,21 @@
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Get coin button";
             // 
+            // groupBox14
+            // 
+            this.groupBox14.Location = new System.Drawing.Point(761, 12);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(200, 163);
+            this.groupBox14.TabIndex = 9;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Advanced payment";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 525);
+            this.Controls.Add(this.groupBox14);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
@@ -528,6 +539,7 @@
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox14;
     }
 }
 
