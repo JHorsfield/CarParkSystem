@@ -44,6 +44,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbxExitPass = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnPaymentneeded = new System.Windows.Forms.Button();
+            this.lblpayneeded = new System.Windows.Forms.Label();
             this.dcLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnApplyDiscount = new System.Windows.Forms.Button();
@@ -51,19 +53,28 @@
             this.lblTimer = new System.Windows.Forms.Label();
             this.btnHourBackwards = new System.Windows.Forms.Button();
             this.btnHourFoward = new System.Windows.Forms.Button();
-            this.lblpayneeded = new System.Windows.Forms.Label();
-            this.btnPaymentneeded = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblParkingError = new System.Windows.Forms.Label();
             this.BtnPark = new System.Windows.Forms.Button();
             this.btnDownFloor = new System.Windows.Forms.Button();
             this.btnUpFloor = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -211,6 +222,25 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnPaymentneeded
+            // 
+            this.btnPaymentneeded.Location = new System.Drawing.Point(6, 35);
+            this.btnPaymentneeded.Name = "btnPaymentneeded";
+            this.btnPaymentneeded.Size = new System.Drawing.Size(75, 23);
+            this.btnPaymentneeded.TabIndex = 0;
+            this.btnPaymentneeded.Text = "Pay for stay";
+            this.btnPaymentneeded.UseVisualStyleBackColor = true;
+            this.btnPaymentneeded.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // lblpayneeded
+            // 
+            this.lblpayneeded.AutoSize = true;
+            this.lblpayneeded.Location = new System.Drawing.Point(6, 19);
+            this.lblpayneeded.Name = "lblpayneeded";
+            this.lblpayneeded.Size = new System.Drawing.Size(35, 13);
+            this.lblpayneeded.TabIndex = 1;
+            this.lblpayneeded.Text = "label3";
+            // 
             // dcLbl
             // 
             this.dcLbl.AutoSize = true;
@@ -275,25 +305,6 @@
             this.btnHourFoward.Text = "Time++";
             this.btnHourFoward.UseVisualStyleBackColor = true;
             this.btnHourFoward.Click += new System.EventHandler(this.btnHourFoward_Click);
-            // 
-            // lblpayneeded
-            // 
-            this.lblpayneeded.AutoSize = true;
-            this.lblpayneeded.Location = new System.Drawing.Point(6, 19);
-            this.lblpayneeded.Name = "lblpayneeded";
-            this.lblpayneeded.Size = new System.Drawing.Size(35, 13);
-            this.lblpayneeded.TabIndex = 1;
-            this.lblpayneeded.Text = "label3";
-            // 
-            // btnPaymentneeded
-            // 
-            this.btnPaymentneeded.Location = new System.Drawing.Point(6, 35);
-            this.btnPaymentneeded.Name = "btnPaymentneeded";
-            this.btnPaymentneeded.Size = new System.Drawing.Size(75, 23);
-            this.btnPaymentneeded.TabIndex = 0;
-            this.btnPaymentneeded.Text = "Pay for stay";
-            this.btnPaymentneeded.UseVisualStyleBackColor = true;
-            this.btnPaymentneeded.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // groupBox5
             // 
@@ -361,11 +372,101 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.groupBox13);
+            this.groupBox4.Controls.Add(this.groupBox11);
+            this.groupBox4.Location = new System.Drawing.Point(555, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 163);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Entrance";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Location = new System.Drawing.Point(761, 12);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(200, 163);
+            this.groupBox6.TabIndex = 7;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "payment machine";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Location = new System.Drawing.Point(967, 12);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(200, 163);
+            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Car grid";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Location = new System.Drawing.Point(555, 181);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(200, 163);
+            this.groupBox8.TabIndex = 7;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Discount";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.groupBox12);
+            this.groupBox9.Location = new System.Drawing.Point(555, 350);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(200, 163);
+            this.groupBox9.TabIndex = 7;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Exit";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Location = new System.Drawing.Point(761, 181);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(200, 163);
+            this.groupBox10.TabIndex = 8;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Emergency Mode";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Location = new System.Drawing.Point(6, 19);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(188, 45);
+            this.groupBox11.TabIndex = 0;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "License plate scanner";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Location = new System.Drawing.Point(6, 19);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(188, 45);
+            this.groupBox12.TabIndex = 1;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "License plate scanner";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Location = new System.Drawing.Point(6, 70);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(79, 83);
+            this.groupBox13.TabIndex = 1;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Get coin button";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 525);
+            this.ClientSize = new System.Drawing.Size(1267, 525);
+            this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.groupBox9);
+            this.Controls.Add(this.groupBox8);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -380,6 +481,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -416,6 +519,15 @@
         private System.Windows.Forms.Label dcLbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxExitPass;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox groupBox10;
     }
 }
 
