@@ -31,7 +31,16 @@ namespace CarParkSystem
             btnExit.Enabled = false;
             btnPaymentneeded.Enabled = false;
             btnApplyDiscount.Enabled = false;
+
             updateFloors();
+
+            pbxEntranceClosed.BackColor = Color.Transparent;
+            pbxEntranceOpen.BackColor = Color.Transparent;
+
+            pbxEntranceOpen.Visible = false;
+            btnNewCar.Visible = false;
+
+
         }
         public void updateCarListBox()
         {
@@ -145,6 +154,12 @@ namespace CarParkSystem
                 currentCar = null;
                 updateFloors();
                 updateCarListBox();
+
+
+                pbxEntranceOpen.Visible = false;
+                btnNewCar.Visible = false;
+                pbxEntranceClosed.Visible = true;
+
             }
             else
             {
@@ -159,6 +174,10 @@ namespace CarParkSystem
             currentChip = carpark.GetChipMachine().getTicketChip()[currentId];
             button2.Enabled = false;
             btnNewCar.Enabled = true;
+
+            pbxEntranceOpen.Visible = true;
+            pbxEntranceClosed.Visible = false;
+            btnNewCar.Visible = true;
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
@@ -281,6 +300,11 @@ namespace CarParkSystem
         }
 
         private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
