@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbxFloors = new System.Windows.Forms.ListBox();
             this.lbxCarList = new System.Windows.Forms.ListBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblCurrentCar = new System.Windows.Forms.Label();
             this.lblErrorText = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbxLicense = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbxExitPass = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPaymentneeded = new System.Windows.Forms.Button();
@@ -52,7 +50,6 @@
             this.lblTimer = new System.Windows.Forms.Label();
             this.btnHourBackwards = new System.Windows.Forms.Button();
             this.btnHourFoward = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblParkingError = new System.Windows.Forms.Label();
             this.BtnPark = new System.Windows.Forms.Button();
             this.btnDownFloor = new System.Windows.Forms.Button();
@@ -75,7 +72,6 @@
             this.btnEmergency = new System.Windows.Forms.Button();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceClosed)).BeginInit();
@@ -92,6 +88,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblErrorText);
+            this.groupBox1.Controls.Add(this.lblCurrentCar);
             this.groupBox1.Controls.Add(this.lbxFloors);
             this.groupBox1.Controls.Add(this.lbxCarList);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -104,9 +102,9 @@
             // lbxFloors
             // 
             this.lbxFloors.FormattingEnabled = true;
-            this.lbxFloors.Location = new System.Drawing.Point(6, 25);
+            this.lbxFloors.Location = new System.Drawing.Point(6, 38);
             this.lbxFloors.Name = "lbxFloors";
-            this.lbxFloors.Size = new System.Drawing.Size(188, 108);
+            this.lbxFloors.Size = new System.Drawing.Size(188, 95);
             this.lbxFloors.TabIndex = 1;
             // 
             // lbxCarList
@@ -117,25 +115,10 @@
             this.lbxCarList.Size = new System.Drawing.Size(188, 355);
             this.lbxCarList.TabIndex = 0;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Controls.Add(this.lblCurrentCar);
-            this.groupBox2.Controls.Add(this.lblErrorText);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.tbxPassCode);
-            this.groupBox2.Location = new System.Drawing.Point(218, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(331, 163);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Car entry";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
             // lblCurrentCar
             // 
             this.lblCurrentCar.AutoSize = true;
-            this.lblCurrentCar.Location = new System.Drawing.Point(10, 136);
+            this.lblCurrentCar.Location = new System.Drawing.Point(6, 19);
             this.lblCurrentCar.Name = "lblCurrentCar";
             this.lblCurrentCar.Size = new System.Drawing.Size(71, 13);
             this.lblCurrentCar.TabIndex = 11;
@@ -144,7 +127,7 @@
             // lblErrorText
             // 
             this.lblErrorText.AutoSize = true;
-            this.lblErrorText.Location = new System.Drawing.Point(10, 19);
+            this.lblErrorText.Location = new System.Drawing.Point(123, 19);
             this.lblErrorText.Name = "lblErrorText";
             this.lblErrorText.Size = new System.Drawing.Size(71, 13);
             this.lblErrorText.TabIndex = 10;
@@ -153,7 +136,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 77);
+            this.label2.Location = new System.Drawing.Point(116, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 9;
@@ -161,7 +144,7 @@
             // 
             // tbxPassCode
             // 
-            this.tbxPassCode.Location = new System.Drawing.Point(6, 74);
+            this.tbxPassCode.Location = new System.Drawing.Point(10, 76);
             this.tbxPassCode.Name = "tbxPassCode";
             this.tbxPassCode.Size = new System.Drawing.Size(100, 20);
             this.tbxPassCode.TabIndex = 6;
@@ -191,15 +174,6 @@
             this.button2.Text = "Get Coin";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(218, 350);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(331, 163);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Car Exit";
             // 
             // tbxExitPass
             // 
@@ -302,16 +276,6 @@
             this.btnHourFoward.UseVisualStyleBackColor = true;
             this.btnHourFoward.Click += new System.EventHandler(this.btnHourFoward_Click);
             // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox5.Location = new System.Drawing.Point(218, 181);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(331, 163);
-            this.groupBox5.TabIndex = 5;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "In park";
-            // 
             // lblParkingError
             // 
             this.lblParkingError.AutoSize = true;
@@ -364,7 +328,7 @@
             this.groupBox4.Controls.Add(this.groupBox13);
             this.groupBox4.Controls.Add(this.groupBox11);
             this.groupBox4.Controls.Add(this.pbxEntranceOpen);
-            this.groupBox4.Location = new System.Drawing.Point(555, 12);
+            this.groupBox4.Location = new System.Drawing.Point(218, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 163);
             this.groupBox4.TabIndex = 6;
@@ -429,7 +393,7 @@
             // 
             this.groupBox6.Controls.Add(this.btnPaymentneeded);
             this.groupBox6.Controls.Add(this.lblpayneeded);
-            this.groupBox6.Location = new System.Drawing.Point(967, 181);
+            this.groupBox6.Location = new System.Drawing.Point(630, 181);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(200, 163);
             this.groupBox6.TabIndex = 7;
@@ -438,7 +402,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Location = new System.Drawing.Point(967, 12);
+            this.groupBox7.Location = new System.Drawing.Point(630, 12);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(200, 163);
             this.groupBox7.TabIndex = 7;
@@ -451,7 +415,7 @@
             this.groupBox8.Controls.Add(this.nudDiscountAmount);
             this.groupBox8.Controls.Add(this.label3);
             this.groupBox8.Controls.Add(this.btnApplyDiscount);
-            this.groupBox8.Location = new System.Drawing.Point(555, 181);
+            this.groupBox8.Location = new System.Drawing.Point(218, 181);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(200, 163);
             this.groupBox8.TabIndex = 7;
@@ -463,7 +427,7 @@
             this.groupBox9.Controls.Add(this.btnExit);
             this.groupBox9.Controls.Add(this.tbxExitPass);
             this.groupBox9.Controls.Add(this.groupBox12);
-            this.groupBox9.Location = new System.Drawing.Point(555, 350);
+            this.groupBox9.Location = new System.Drawing.Point(218, 350);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(200, 163);
             this.groupBox9.TabIndex = 7;
@@ -482,7 +446,7 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.btnEmergency);
-            this.groupBox10.Location = new System.Drawing.Point(967, 350);
+            this.groupBox10.Location = new System.Drawing.Point(630, 350);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(200, 163);
             this.groupBox10.TabIndex = 8;
@@ -491,7 +455,7 @@
             // 
             // groupBox14
             // 
-            this.groupBox14.Location = new System.Drawing.Point(761, 181);
+            this.groupBox14.Location = new System.Drawing.Point(424, 181);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(200, 163);
             this.groupBox14.TabIndex = 9;
@@ -500,11 +464,13 @@
             // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.label2);
+            this.groupBox15.Controls.Add(this.tbxPassCode);
             this.groupBox15.Controls.Add(this.btnUpFloor);
             this.groupBox15.Controls.Add(this.btnDownFloor);
             this.groupBox15.Controls.Add(this.BtnPark);
             this.groupBox15.Controls.Add(this.lblParkingError);
-            this.groupBox15.Location = new System.Drawing.Point(761, 12);
+            this.groupBox15.Location = new System.Drawing.Point(424, 12);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(200, 163);
             this.groupBox15.TabIndex = 10;
@@ -525,7 +491,7 @@
             this.groupBox16.Controls.Add(this.lblTimer);
             this.groupBox16.Controls.Add(this.btnHourFoward);
             this.groupBox16.Controls.Add(this.btnHourBackwards);
-            this.groupBox16.Location = new System.Drawing.Point(761, 350);
+            this.groupBox16.Location = new System.Drawing.Point(424, 350);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(200, 163);
             this.groupBox16.TabIndex = 12;
@@ -536,7 +502,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 525);
+            this.ClientSize = new System.Drawing.Size(840, 525);
             this.Controls.Add(this.groupBox16);
             this.Controls.Add(this.groupBox15);
             this.Controls.Add(this.groupBox14);
@@ -546,15 +512,11 @@
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Car Park System";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceClosed)).EndInit();
@@ -581,11 +543,8 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lbxCarList;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button BtnPark;
         private System.Windows.Forms.Button btnDownFloor;
         private System.Windows.Forms.Button btnUpFloor;
