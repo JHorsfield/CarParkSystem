@@ -72,17 +72,22 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.btnEmergency = new System.Windows.Forms.Button();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).BeginInit();
-            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceClosed)).BeginInit();
             this.groupBox13.SuspendLayout();
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceOpen)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox16.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -189,10 +194,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.tbxExitPass);
-            this.groupBox3.Controls.Add(this.btnExit);
-            this.groupBox3.Controls.Add(this.btnPaymentneeded);
-            this.groupBox3.Controls.Add(this.lblpayneeded);
             this.groupBox3.Location = new System.Drawing.Point(218, 350);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(331, 163);
@@ -202,14 +203,14 @@
             // 
             // tbxExitPass
             // 
-            this.tbxExitPass.Location = new System.Drawing.Point(6, 132);
+            this.tbxExitPass.Location = new System.Drawing.Point(6, 137);
             this.tbxExitPass.Name = "tbxExitPass";
             this.tbxExitPass.Size = new System.Drawing.Size(100, 20);
             this.tbxExitPass.TabIndex = 12;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(6, 103);
+            this.btnExit.Location = new System.Drawing.Point(119, 134);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 2;
@@ -219,7 +220,7 @@
             // 
             // btnPaymentneeded
             // 
-            this.btnPaymentneeded.Location = new System.Drawing.Point(6, 35);
+            this.btnPaymentneeded.Location = new System.Drawing.Point(6, 32);
             this.btnPaymentneeded.Name = "btnPaymentneeded";
             this.btnPaymentneeded.Size = new System.Drawing.Size(75, 23);
             this.btnPaymentneeded.TabIndex = 0;
@@ -230,7 +231,7 @@
             // lblpayneeded
             // 
             this.lblpayneeded.AutoSize = true;
-            this.lblpayneeded.Location = new System.Drawing.Point(6, 19);
+            this.lblpayneeded.Location = new System.Drawing.Point(6, 16);
             this.lblpayneeded.Name = "lblpayneeded";
             this.lblpayneeded.Size = new System.Drawing.Size(35, 13);
             this.lblpayneeded.TabIndex = 1;
@@ -239,7 +240,7 @@
             // dcLbl
             // 
             this.dcLbl.AutoSize = true;
-            this.dcLbl.Location = new System.Drawing.Point(250, 84);
+            this.dcLbl.Location = new System.Drawing.Point(102, 16);
             this.dcLbl.Name = "dcLbl";
             this.dcLbl.Size = new System.Drawing.Size(13, 13);
             this.dcLbl.TabIndex = 8;
@@ -249,7 +250,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(157, 84);
+            this.label3.Location = new System.Drawing.Point(9, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 7;
@@ -257,7 +258,7 @@
             // 
             // btnApplyDiscount
             // 
-            this.btnApplyDiscount.Location = new System.Drawing.Point(240, 126);
+            this.btnApplyDiscount.Location = new System.Drawing.Point(92, 58);
             this.btnApplyDiscount.Name = "btnApplyDiscount";
             this.btnApplyDiscount.Size = new System.Drawing.Size(75, 23);
             this.btnApplyDiscount.TabIndex = 6;
@@ -267,7 +268,7 @@
             // 
             // nudDiscountAmount
             // 
-            this.nudDiscountAmount.Location = new System.Drawing.Point(195, 100);
+            this.nudDiscountAmount.Location = new System.Drawing.Point(47, 32);
             this.nudDiscountAmount.Name = "nudDiscountAmount";
             this.nudDiscountAmount.Size = new System.Drawing.Size(120, 20);
             this.nudDiscountAmount.TabIndex = 5;
@@ -275,7 +276,7 @@
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Location = new System.Drawing.Point(46, 110);
+            this.lblTimer.Location = new System.Drawing.Point(46, 45);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(35, 13);
             this.lblTimer.TabIndex = 4;
@@ -283,7 +284,7 @@
             // 
             // btnHourBackwards
             // 
-            this.btnHourBackwards.Location = new System.Drawing.Point(6, 126);
+            this.btnHourBackwards.Location = new System.Drawing.Point(6, 61);
             this.btnHourBackwards.Name = "btnHourBackwards";
             this.btnHourBackwards.Size = new System.Drawing.Size(75, 23);
             this.btnHourBackwards.TabIndex = 3;
@@ -293,7 +294,7 @@
             // 
             // btnHourFoward
             // 
-            this.btnHourFoward.Location = new System.Drawing.Point(6, 84);
+            this.btnHourFoward.Location = new System.Drawing.Point(6, 19);
             this.btnHourFoward.Name = "btnHourFoward";
             this.btnHourFoward.Size = new System.Drawing.Size(75, 23);
             this.btnHourFoward.TabIndex = 2;
@@ -304,17 +305,6 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox5.Controls.Add(this.lblTimer);
-            this.groupBox5.Controls.Add(this.dcLbl);
-            this.groupBox5.Controls.Add(this.btnHourBackwards);
-            this.groupBox5.Controls.Add(this.lblParkingError);
-            this.groupBox5.Controls.Add(this.btnHourFoward);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.BtnPark);
-            this.groupBox5.Controls.Add(this.btnApplyDiscount);
-            this.groupBox5.Controls.Add(this.btnDownFloor);
-            this.groupBox5.Controls.Add(this.nudDiscountAmount);
-            this.groupBox5.Controls.Add(this.btnUpFloor);
             this.groupBox5.Location = new System.Drawing.Point(218, 181);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(331, 163);
@@ -325,7 +315,7 @@
             // lblParkingError
             // 
             this.lblParkingError.AutoSize = true;
-            this.lblParkingError.Location = new System.Drawing.Point(84, 24);
+            this.lblParkingError.Location = new System.Drawing.Point(116, 24);
             this.lblParkingError.Name = "lblParkingError";
             this.lblParkingError.Size = new System.Drawing.Size(71, 13);
             this.lblParkingError.TabIndex = 11;
@@ -333,7 +323,7 @@
             // 
             // BtnPark
             // 
-            this.BtnPark.Location = new System.Drawing.Point(87, 48);
+            this.BtnPark.Location = new System.Drawing.Point(119, 134);
             this.BtnPark.Name = "BtnPark";
             this.BtnPark.Size = new System.Drawing.Size(75, 23);
             this.BtnPark.TabIndex = 4;
@@ -343,7 +333,7 @@
             // 
             // btnDownFloor
             // 
-            this.btnDownFloor.Location = new System.Drawing.Point(6, 48);
+            this.btnDownFloor.Location = new System.Drawing.Point(6, 134);
             this.btnDownFloor.Name = "btnDownFloor";
             this.btnDownFloor.Size = new System.Drawing.Size(75, 23);
             this.btnDownFloor.TabIndex = 3;
@@ -437,6 +427,8 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.btnPaymentneeded);
+            this.groupBox6.Controls.Add(this.lblpayneeded);
             this.groupBox6.Location = new System.Drawing.Point(967, 181);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(200, 163);
@@ -455,6 +447,10 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.dcLbl);
+            this.groupBox8.Controls.Add(this.nudDiscountAmount);
+            this.groupBox8.Controls.Add(this.label3);
+            this.groupBox8.Controls.Add(this.btnApplyDiscount);
             this.groupBox8.Location = new System.Drawing.Point(555, 181);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(200, 163);
@@ -464,6 +460,8 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.btnExit);
+            this.groupBox9.Controls.Add(this.tbxExitPass);
             this.groupBox9.Controls.Add(this.groupBox12);
             this.groupBox9.Location = new System.Drawing.Point(555, 350);
             this.groupBox9.Name = "groupBox9";
@@ -483,6 +481,7 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.btnEmergency);
             this.groupBox10.Location = new System.Drawing.Point(967, 350);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(200, 163);
@@ -501,6 +500,10 @@
             // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.btnUpFloor);
+            this.groupBox15.Controls.Add(this.btnDownFloor);
+            this.groupBox15.Controls.Add(this.BtnPark);
+            this.groupBox15.Controls.Add(this.lblParkingError);
             this.groupBox15.Location = new System.Drawing.Point(761, 12);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(200, 163);
@@ -508,11 +511,33 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Parking";
             // 
+            // btnEmergency
+            // 
+            this.btnEmergency.Location = new System.Drawing.Point(60, 72);
+            this.btnEmergency.Name = "btnEmergency";
+            this.btnEmergency.Size = new System.Drawing.Size(75, 23);
+            this.btnEmergency.TabIndex = 11;
+            this.btnEmergency.Text = "Emergency button";
+            this.btnEmergency.UseVisualStyleBackColor = true;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.lblTimer);
+            this.groupBox16.Controls.Add(this.btnHourFoward);
+            this.groupBox16.Controls.Add(this.btnHourBackwards);
+            this.groupBox16.Location = new System.Drawing.Point(761, 350);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(200, 163);
+            this.groupBox16.TabIndex = 12;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "The passage of time";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 525);
+            this.Controls.Add(this.groupBox16);
             this.Controls.Add(this.groupBox15);
             this.Controls.Add(this.groupBox14);
             this.Controls.Add(this.groupBox10);
@@ -530,18 +555,24 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceClosed)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceOpen)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -591,6 +622,8 @@
         private System.Windows.Forms.PictureBox pbxEntranceClosed;
         private System.Windows.Forms.PictureBox pbxEntranceOpen;
         private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Button btnEmergency;
+        private System.Windows.Forms.GroupBox groupBox16;
     }
 }
 
