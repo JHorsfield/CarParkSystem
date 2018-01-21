@@ -92,7 +92,7 @@ namespace CarParkSystem
                     tbxPassCode.Text = "";
                     updateCarListBox();
                     currentCar = carpark.getCar(license);
-                    lblCurrentCar.Text = "Current cars license plate:" + license;
+                    lblCurrentCar.Text = "Current car's license plate:" + license;
                     button2.Enabled = true;
                     btnNewCar.Enabled = false;
                     btnDownFloor.Enabled = true;
