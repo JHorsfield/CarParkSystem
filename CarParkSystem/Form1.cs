@@ -60,7 +60,7 @@ namespace CarParkSystem
                 }
                 else
                 {
-                    lbxCarList.Items.Add(car.licenseString() + " : paided");
+                    lbxCarList.Items.Add(car.licenseString() + " : paid");
                 }
             }
         }
@@ -403,6 +403,8 @@ for(int count=0; count<10; count++)
         private void btnEmergency_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Car Park in shut down please wait till the emergency services arrive");
+                pbxEntranceOpen.Visible = !pbxEntranceOpen.Visible;
+                pbxEntranceClosed.Visible = !pbxEntranceClosed.Visible;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
