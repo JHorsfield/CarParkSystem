@@ -330,15 +330,18 @@ namespace CarParkSystem
 
         private void btnCardScan_Click(object sender, EventArgs e)
         {
-            int discount = 20;//fixed discount
+            if (lbxCarList.SelectedItem != null)
+            {
+                int discount = 20;//fixed discount
 
-            string licenseInput = lbxCarList.SelectedItem.ToString();
-            string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
-            int coinId = carpark.getCar(licensePlate).getCoinId();
+                string licenseInput = lbxCarList.SelectedItem.ToString();
+                string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
+                int coinId = carpark.getCar(licensePlate).getCoinId();
 
-            carpark.getDiscountMachine().addDiscount(discount, coinId);
-            float dcTmp = 100 * carpark.getDiscountMachine().getTicketChip()[coinId].returnDiscount();
-            dcLbl.Text = dcTmp.ToString();
+                carpark.getDiscountMachine().addDiscount(discount, coinId);
+                float dcTmp = 100 * carpark.getDiscountMachine().getTicketChip()[coinId].returnDiscount();
+                dcLbl.Text = dcTmp.ToString();
+            }
         }
 
         private void btnAdvancePay_Click(object sender, EventArgs e)
