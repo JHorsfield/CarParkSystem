@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblErrorText = new System.Windows.Forms.Label();
             this.lbxFloors = new System.Windows.Forms.ListBox();
             this.lbxCarList = new System.Windows.Forms.ListBox();
             this.lblCurrentCar = new System.Windows.Forms.Label();
-            this.lblErrorText = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbxPassCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,36 +56,42 @@
             this.btnUpFloor = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnNewCar = new System.Windows.Forms.Button();
+            this.pbxEntranceClosed = new System.Windows.Forms.PictureBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.pbxEntranceOpen = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.btnCardScan = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.btnEmergency = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.btnEmergency = new System.Windows.Forms.Button();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.btnCardScan = new System.Windows.Forms.Button();
-            this.btnNewCar = new System.Windows.Forms.Button();
-            this.pbxEntranceClosed = new System.Windows.Forms.PictureBox();
-            this.pbxEntranceOpen = new System.Windows.Forms.PictureBox();
+            this.btnAdvancePay = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxAdvanceLicensePlate = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceClosed)).BeginInit();
             this.groupBox13.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceOpen)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceClosed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceOpen)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -99,6 +105,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Floor space";
+            // 
+            // lblErrorText
+            // 
+            this.lblErrorText.AutoSize = true;
+            this.lblErrorText.Location = new System.Drawing.Point(6, 22);
+            this.lblErrorText.Name = "lblErrorText";
+            this.lblErrorText.Size = new System.Drawing.Size(71, 13);
+            this.lblErrorText.TabIndex = 10;
+            this.lblErrorText.Text = "License Plate";
             // 
             // lbxFloors
             // 
@@ -119,20 +134,11 @@
             // lblCurrentCar
             // 
             this.lblCurrentCar.AutoSize = true;
-            this.lblCurrentCar.Location = new System.Drawing.Point(8, 26);
+            this.lblCurrentCar.Location = new System.Drawing.Point(6, 16);
             this.lblCurrentCar.Name = "lblCurrentCar";
             this.lblCurrentCar.Size = new System.Drawing.Size(71, 13);
             this.lblCurrentCar.TabIndex = 11;
             this.lblCurrentCar.Text = "License Plate";
-            // 
-            // lblErrorText
-            // 
-            this.lblErrorText.AutoSize = true;
-            this.lblErrorText.Location = new System.Drawing.Point(6, 22);
-            this.lblErrorText.Name = "lblErrorText";
-            this.lblErrorText.Size = new System.Drawing.Size(71, 13);
-            this.lblErrorText.TabIndex = 10;
-            this.lblErrorText.Text = "License Plate";
             // 
             // label2
             // 
@@ -178,14 +184,14 @@
             // 
             // tbxExitPass
             // 
-            this.tbxExitPass.Location = new System.Drawing.Point(6, 137);
+            this.tbxExitPass.Location = new System.Drawing.Point(6, 73);
             this.tbxExitPass.Name = "tbxExitPass";
             this.tbxExitPass.Size = new System.Drawing.Size(100, 20);
             this.tbxExitPass.TabIndex = 12;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(119, 134);
+            this.btnExit.Location = new System.Drawing.Point(119, 70);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 2;
@@ -195,7 +201,7 @@
             // 
             // btnPaymentneeded
             // 
-            this.btnPaymentneeded.Location = new System.Drawing.Point(6, 32);
+            this.btnPaymentneeded.Location = new System.Drawing.Point(6, 20);
             this.btnPaymentneeded.Name = "btnPaymentneeded";
             this.btnPaymentneeded.Size = new System.Drawing.Size(75, 23);
             this.btnPaymentneeded.TabIndex = 0;
@@ -206,7 +212,7 @@
             // lblpayneeded
             // 
             this.lblpayneeded.AutoSize = true;
-            this.lblpayneeded.Location = new System.Drawing.Point(6, 16);
+            this.lblpayneeded.Location = new System.Drawing.Point(87, 25);
             this.lblpayneeded.Name = "lblpayneeded";
             this.lblpayneeded.Size = new System.Drawing.Size(35, 13);
             this.lblpayneeded.TabIndex = 1;
@@ -215,7 +221,7 @@
             // dcLbl
             // 
             this.dcLbl.AutoSize = true;
-            this.dcLbl.Location = new System.Drawing.Point(96, 91);
+            this.dcLbl.Location = new System.Drawing.Point(96, 18);
             this.dcLbl.Name = "dcLbl";
             this.dcLbl.Size = new System.Drawing.Size(13, 13);
             this.dcLbl.TabIndex = 8;
@@ -225,7 +231,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 91);
+            this.label3.Location = new System.Drawing.Point(4, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 7;
@@ -233,7 +239,7 @@
             // 
             // btnApplyDiscount
             // 
-            this.btnApplyDiscount.Location = new System.Drawing.Point(7, 133);
+            this.btnApplyDiscount.Location = new System.Drawing.Point(7, 60);
             this.btnApplyDiscount.Name = "btnApplyDiscount";
             this.btnApplyDiscount.Size = new System.Drawing.Size(75, 23);
             this.btnApplyDiscount.TabIndex = 6;
@@ -243,7 +249,7 @@
             // 
             // nudDiscountAmount
             // 
-            this.nudDiscountAmount.Location = new System.Drawing.Point(6, 107);
+            this.nudDiscountAmount.Location = new System.Drawing.Point(6, 34);
             this.nudDiscountAmount.Name = "nudDiscountAmount";
             this.nudDiscountAmount.Size = new System.Drawing.Size(120, 20);
             this.nudDiscountAmount.TabIndex = 5;
@@ -336,6 +342,29 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Entrance";
             // 
+            // btnNewCar
+            // 
+            this.btnNewCar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewCar.Image = global::CarParkSystem.Properties.Resources.CarParkCar1;
+            this.btnNewCar.Location = new System.Drawing.Point(120, 103);
+            this.btnNewCar.Name = "btnNewCar";
+            this.btnNewCar.Size = new System.Drawing.Size(76, 46);
+            this.btnNewCar.TabIndex = 7;
+            this.btnNewCar.Text = "New Car";
+            this.btnNewCar.UseVisualStyleBackColor = true;
+            this.btnNewCar.Click += new System.EventHandler(this.btnNewCar_Click);
+            // 
+            // pbxEntranceClosed
+            // 
+            this.pbxEntranceClosed.Image = global::CarParkSystem.Properties.Resources.CarParkEntranceClosed;
+            this.pbxEntranceClosed.Location = new System.Drawing.Point(91, 94);
+            this.pbxEntranceClosed.Name = "pbxEntranceClosed";
+            this.pbxEntranceClosed.Size = new System.Drawing.Size(100, 59);
+            this.pbxEntranceClosed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEntranceClosed.TabIndex = 10;
+            this.pbxEntranceClosed.TabStop = false;
+            // 
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.button2);
@@ -356,6 +385,16 @@
             this.groupBox11.TabIndex = 0;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "License plate scanner";
+            // 
+            // pbxEntranceOpen
+            // 
+            this.pbxEntranceOpen.Image = global::CarParkSystem.Properties.Resources.CarParkEntranceOpenV2;
+            this.pbxEntranceOpen.Location = new System.Drawing.Point(91, 52);
+            this.pbxEntranceOpen.Name = "pbxEntranceOpen";
+            this.pbxEntranceOpen.Size = new System.Drawing.Size(45, 101);
+            this.pbxEntranceOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEntranceOpen.TabIndex = 11;
+            this.pbxEntranceOpen.TabStop = false;
             // 
             // groupBox6
             // 
@@ -391,6 +430,19 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Discount";
             // 
+            // btnCardScan
+            // 
+            this.btnCardScan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCardScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardScan.Image = global::CarParkSystem.Properties.Resources.cardScan;
+            this.btnCardScan.Location = new System.Drawing.Point(132, 34);
+            this.btnCardScan.Name = "btnCardScan";
+            this.btnCardScan.Size = new System.Drawing.Size(47, 46);
+            this.btnCardScan.TabIndex = 12;
+            this.btnCardScan.Text = "Scan ID Card";
+            this.btnCardScan.UseVisualStyleBackColor = true;
+            this.btnCardScan.Click += new System.EventHandler(this.btnCardScan_Click);
+            // 
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.btnExit);
@@ -423,8 +475,20 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Emergency Mode";
             // 
+            // btnEmergency
+            // 
+            this.btnEmergency.Location = new System.Drawing.Point(60, 72);
+            this.btnEmergency.Name = "btnEmergency";
+            this.btnEmergency.Size = new System.Drawing.Size(75, 23);
+            this.btnEmergency.TabIndex = 11;
+            this.btnEmergency.Text = "Emergency button";
+            this.btnEmergency.UseVisualStyleBackColor = true;
+            this.btnEmergency.Click += new System.EventHandler(this.btnEmergency_Click);
+            // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.groupBox2);
+            this.groupBox14.Controls.Add(this.btnAdvancePay);
             this.groupBox14.Location = new System.Drawing.Point(424, 181);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(200, 163);
@@ -447,15 +511,6 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Parking";
             // 
-            // btnEmergency
-            // 
-            this.btnEmergency.Location = new System.Drawing.Point(60, 72);
-            this.btnEmergency.Name = "btnEmergency";
-            this.btnEmergency.Size = new System.Drawing.Size(75, 23);
-            this.btnEmergency.TabIndex = 11;
-            this.btnEmergency.Text = "Emergency button";
-            this.btnEmergency.UseVisualStyleBackColor = true;
-            // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.lblTimer);
@@ -468,51 +523,42 @@
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "The passage of time";
             // 
-            // btnCardScan
+            // btnAdvancePay
             // 
-            this.btnCardScan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCardScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCardScan.Image = global::CarParkSystem.Properties.Resources.cardScan;
-            this.btnCardScan.Location = new System.Drawing.Point(11, 20);
-            this.btnCardScan.Name = "btnCardScan";
-            this.btnCardScan.Size = new System.Drawing.Size(47, 46);
-            this.btnCardScan.TabIndex = 12;
-            this.btnCardScan.Text = "Scan ID Card";
-            this.btnCardScan.UseVisualStyleBackColor = true;
-            this.btnCardScan.Click += new System.EventHandler(this.btnCardScan_Click);
+            this.btnAdvancePay.Location = new System.Drawing.Point(6, 20);
+            this.btnAdvancePay.Name = "btnAdvancePay";
+            this.btnAdvancePay.Size = new System.Drawing.Size(104, 23);
+            this.btnAdvancePay.TabIndex = 2;
+            this.btnAdvancePay.Text = "Advance Pay";
+            this.btnAdvancePay.UseVisualStyleBackColor = true;
+            this.btnAdvancePay.Click += new System.EventHandler(this.btnAdvancePay_Click);
             // 
-            // btnNewCar
+            // groupBox2
             // 
-            this.btnNewCar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNewCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewCar.Image = global::CarParkSystem.Properties.Resources.CarParkCar1;
-            this.btnNewCar.Location = new System.Drawing.Point(120, 103);
-            this.btnNewCar.Name = "btnNewCar";
-            this.btnNewCar.Size = new System.Drawing.Size(76, 46);
-            this.btnNewCar.TabIndex = 7;
-            this.btnNewCar.Text = "New Car";
-            this.btnNewCar.UseVisualStyleBackColor = true;
-            this.btnNewCar.Click += new System.EventHandler(this.btnNewCar_Click);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.tbxAdvanceLicensePlate);
+            this.groupBox2.Location = new System.Drawing.Point(6, 49);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(188, 45);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Input License plate";
             // 
-            // pbxEntranceClosed
+            // label5
             // 
-            this.pbxEntranceClosed.Image = global::CarParkSystem.Properties.Resources.CarParkEntranceClosed;
-            this.pbxEntranceClosed.Location = new System.Drawing.Point(91, 94);
-            this.pbxEntranceClosed.Name = "pbxEntranceClosed";
-            this.pbxEntranceClosed.Size = new System.Drawing.Size(100, 59);
-            this.pbxEntranceClosed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxEntranceClosed.TabIndex = 10;
-            this.pbxEntranceClosed.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(111, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "License Plate";
             // 
-            // pbxEntranceOpen
+            // tbxAdvanceLicensePlate
             // 
-            this.pbxEntranceOpen.Image = global::CarParkSystem.Properties.Resources.CarParkEntranceOpenV2;
-            this.pbxEntranceOpen.Location = new System.Drawing.Point(91, 52);
-            this.pbxEntranceOpen.Name = "pbxEntranceOpen";
-            this.pbxEntranceOpen.Size = new System.Drawing.Size(45, 101);
-            this.pbxEntranceOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxEntranceOpen.TabIndex = 11;
-            this.pbxEntranceOpen.TabStop = false;
+            this.tbxAdvanceLicensePlate.Location = new System.Drawing.Point(5, 19);
+            this.tbxAdvanceLicensePlate.Name = "tbxAdvanceLicensePlate";
+            this.tbxAdvanceLicensePlate.Size = new System.Drawing.Size(100, 20);
+            this.tbxAdvanceLicensePlate.TabIndex = 5;
             // 
             // Form1
             // 
@@ -535,9 +581,11 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).EndInit();
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceClosed)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceOpen)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -547,12 +595,13 @@
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox10.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceClosed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceOpen)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -602,6 +651,10 @@
         private System.Windows.Forms.Button btnEmergency;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.Button btnCardScan;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbxAdvanceLicensePlate;
+        private System.Windows.Forms.Button btnAdvancePay;
     }
 }
 
