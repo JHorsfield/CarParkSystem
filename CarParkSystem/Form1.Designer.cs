@@ -235,9 +235,8 @@
             this.lblpayneeded.AutoSize = true;
             this.lblpayneeded.Location = new System.Drawing.Point(87, 25);
             this.lblpayneeded.Name = "lblpayneeded";
-            this.lblpayneeded.Size = new System.Drawing.Size(35, 13);
+            this.lblpayneeded.Size = new System.Drawing.Size(0, 13);
             this.lblpayneeded.TabIndex = 1;
-            this.lblpayneeded.Text = "label3";
             // 
             // dcLbl
             // 
