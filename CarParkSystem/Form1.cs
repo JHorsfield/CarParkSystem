@@ -351,6 +351,11 @@ namespace CarParkSystem
         {
             MessageBox.Show("Car Park in shut down please wait till the emergency services arrive");
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
