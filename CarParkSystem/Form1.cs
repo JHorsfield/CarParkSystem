@@ -18,6 +18,11 @@ namespace CarParkSystem
         PaymentChip currentChip;
         int timeDilation;
         List<String> prepaidedLicences = new List<String>();
+        bool[,] carGridArray = new bool[4, 10]{ { true, true, true, true, true, true, true, true, true, true },
+            { true, true, true, true, true, true, true, true, true, true },
+            { true, true, true, true, true, true, true, true, true, true },
+            { true, true, true, true, true, true, true, true, true, false }};
+        PictureBox[] carGridBoxes; 
 
         public Form1()
         {
@@ -41,6 +46,7 @@ namespace CarParkSystem
             pbxEntranceOpen.Visible = false;
             btnNewCar.Visible = false;
 
+            carGridBoxes = new PictureBox[10]{ carGrid1, carGrid2, carGrid3, carGrid4, carGrid5, carGrid6, carGrid7, carGrid8, carGrid9 ,carGrid10};
 
         }
         public void updateCarListBox()
@@ -68,6 +74,7 @@ namespace CarParkSystem
                     int tempI = i + 1;
                     Floor floor = carpark.returnFloorArray()[i];
                     lbxFloors.Items.Add("Floor " + tempI + " has " + floor.spacesLeft() + " spaces left : Current");
+                    
                 }
                 else
                 {
@@ -121,6 +128,17 @@ namespace CarParkSystem
             {
                 currentFloor++;
                 lblParkingError.Text = "";                
+                for(int count=0; count<10; count++)
+                {
+                    if (carGridArray[currentFloor, count])
+                    {
+                        carGridBoxes[count].BackColor = Color.Green;
+                    }
+                    else
+                    {
+                        carGridBoxes[count].BackColor = Color.Red;
+                    }
+                }
             }
             else
             {
@@ -135,6 +153,17 @@ namespace CarParkSystem
             {
                 currentFloor--;
                 lblParkingError.Text = "";
+for(int count=0; count<10; count++)
+                    {
+                        if (carGridArray[currentFloor, count])
+                        {
+                            carGridBoxes[count].BackColor = Color.Green;
+                        }
+                        else
+                        {
+                            carGridBoxes[count].BackColor = Color.Red;
+                        }
+                    }
             }
             else
             {
@@ -156,6 +185,14 @@ namespace CarParkSystem
                 updateFloors();
                 updateCarListBox();
 
+                Random rng = new Random();
+                int space = rng.Next(10);
+                while (!carGridArray[currentFloor, space])
+                {
+                    space = rng.Next(10);
+                }
+                carGridArray[currentFloor, space] = false;
+                carGridBoxes[space].BackColor = Color.Red;
 
                 pbxEntranceOpen.Visible = false;
                 btnNewCar.Visible = false;
@@ -293,7 +330,16 @@ namespace CarParkSystem
                 int coinId = carpark.getCar(licensePlate).getCoinId();
                 if (coinId == -1)
                 {
+
+                    Random rng = new Random();
+                    int space = rng.Next(10);
                     int floor = carpark.getCar(licensePlate).returnFloor();
+                    while(carGridArray[floor, space])
+                    {
+                        space = rng.Next(10);
+                    }
+                    carGridArray[floor, space] = true;
+                    carGridBoxes[space].BackColor = Color.Green;
 
                     carpark.returnFloorArray()[floor].removeCar();
                     carpark.killCar(licensePlate);
