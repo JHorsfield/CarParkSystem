@@ -199,6 +199,7 @@ namespace CarParkSystem
                 int coinId = carpark.getCar(licensePlate).getCoinId();
                 carpark.getDiscountMachine().getTicketChip().Remove(coinId);
                 carpark.getCar(licensePlate).removeCoin();
+                prepaidedLicences.Remove(licensePlate);
             }
             else
             {
