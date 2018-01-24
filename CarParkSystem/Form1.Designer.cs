@@ -70,12 +70,22 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.btnEmergency = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.btnAdvancePay = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbxAdvanceLicensePlate = new System.Windows.Forms.TextBox();
+            this.btnAdvancePay = new System.Windows.Forms.Button();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.carGrid1 = new System.Windows.Forms.PictureBox();
+            this.carGrid2 = new System.Windows.Forms.PictureBox();
+            this.carGrid3 = new System.Windows.Forms.PictureBox();
+            this.carGrid4 = new System.Windows.Forms.PictureBox();
+            this.carGrid5 = new System.Windows.Forms.PictureBox();
+            this.carGrid6 = new System.Windows.Forms.PictureBox();
+            this.carGrid7 = new System.Windows.Forms.PictureBox();
+            this.carGrid8 = new System.Windows.Forms.PictureBox();
+            this.carGrid9 = new System.Windows.Forms.PictureBox();
+            this.carGrid10 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscountAmount)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -84,14 +94,25 @@
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceOpen)).BeginInit();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox14.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid10)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -409,6 +430,16 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.carGrid10);
+            this.groupBox7.Controls.Add(this.carGrid9);
+            this.groupBox7.Controls.Add(this.carGrid8);
+            this.groupBox7.Controls.Add(this.carGrid7);
+            this.groupBox7.Controls.Add(this.carGrid6);
+            this.groupBox7.Controls.Add(this.carGrid5);
+            this.groupBox7.Controls.Add(this.carGrid4);
+            this.groupBox7.Controls.Add(this.carGrid3);
+            this.groupBox7.Controls.Add(this.carGrid2);
+            this.groupBox7.Controls.Add(this.carGrid1);
             this.groupBox7.Location = new System.Drawing.Point(630, 12);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(200, 163);
@@ -496,6 +527,43 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Advanced payment";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.tbxAdvanceLicensePlate);
+            this.groupBox2.Location = new System.Drawing.Point(6, 49);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(188, 45);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Input License plate";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(111, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "License Plate";
+            // 
+            // tbxAdvanceLicensePlate
+            // 
+            this.tbxAdvanceLicensePlate.Location = new System.Drawing.Point(5, 19);
+            this.tbxAdvanceLicensePlate.Name = "tbxAdvanceLicensePlate";
+            this.tbxAdvanceLicensePlate.Size = new System.Drawing.Size(100, 20);
+            this.tbxAdvanceLicensePlate.TabIndex = 5;
+            // 
+            // btnAdvancePay
+            // 
+            this.btnAdvancePay.Location = new System.Drawing.Point(6, 20);
+            this.btnAdvancePay.Name = "btnAdvancePay";
+            this.btnAdvancePay.Size = new System.Drawing.Size(104, 23);
+            this.btnAdvancePay.TabIndex = 2;
+            this.btnAdvancePay.Text = "Advance Pay";
+            this.btnAdvancePay.UseVisualStyleBackColor = true;
+            this.btnAdvancePay.Click += new System.EventHandler(this.btnAdvancePay_Click);
+            // 
             // groupBox15
             // 
             this.groupBox15.Controls.Add(this.label2);
@@ -523,42 +591,96 @@
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "The passage of time";
             // 
-            // btnAdvancePay
+            // carGrid1
             // 
-            this.btnAdvancePay.Location = new System.Drawing.Point(6, 20);
-            this.btnAdvancePay.Name = "btnAdvancePay";
-            this.btnAdvancePay.Size = new System.Drawing.Size(104, 23);
-            this.btnAdvancePay.TabIndex = 2;
-            this.btnAdvancePay.Text = "Advance Pay";
-            this.btnAdvancePay.UseVisualStyleBackColor = true;
-            this.btnAdvancePay.Click += new System.EventHandler(this.btnAdvancePay_Click);
+            this.carGrid1.BackColor = System.Drawing.Color.Green;
+            this.carGrid1.Location = new System.Drawing.Point(6, 19);
+            this.carGrid1.Name = "carGrid1";
+            this.carGrid1.Size = new System.Drawing.Size(32, 50);
+            this.carGrid1.TabIndex = 0;
+            this.carGrid1.TabStop = false;
+            this.carGrid1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // groupBox2
+            // carGrid2
             // 
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.tbxAdvanceLicensePlate);
-            this.groupBox2.Location = new System.Drawing.Point(6, 49);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(188, 45);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Input License plate";
+            this.carGrid2.BackColor = System.Drawing.Color.Green;
+            this.carGrid2.Location = new System.Drawing.Point(49, 19);
+            this.carGrid2.Name = "carGrid2";
+            this.carGrid2.Size = new System.Drawing.Size(32, 50);
+            this.carGrid2.TabIndex = 1;
+            this.carGrid2.TabStop = false;
             // 
-            // label5
+            // carGrid3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "License Plate";
+            this.carGrid3.BackColor = System.Drawing.Color.Green;
+            this.carGrid3.Location = new System.Drawing.Point(87, 19);
+            this.carGrid3.Name = "carGrid3";
+            this.carGrid3.Size = new System.Drawing.Size(32, 50);
+            this.carGrid3.TabIndex = 2;
+            this.carGrid3.TabStop = false;
             // 
-            // tbxAdvanceLicensePlate
+            // carGrid4
             // 
-            this.tbxAdvanceLicensePlate.Location = new System.Drawing.Point(5, 19);
-            this.tbxAdvanceLicensePlate.Name = "tbxAdvanceLicensePlate";
-            this.tbxAdvanceLicensePlate.Size = new System.Drawing.Size(100, 20);
-            this.tbxAdvanceLicensePlate.TabIndex = 5;
+            this.carGrid4.BackColor = System.Drawing.Color.Green;
+            this.carGrid4.Location = new System.Drawing.Point(125, 19);
+            this.carGrid4.Name = "carGrid4";
+            this.carGrid4.Size = new System.Drawing.Size(32, 50);
+            this.carGrid4.TabIndex = 3;
+            this.carGrid4.TabStop = false;
+            // 
+            // carGrid5
+            // 
+            this.carGrid5.BackColor = System.Drawing.Color.Green;
+            this.carGrid5.Location = new System.Drawing.Point(162, 19);
+            this.carGrid5.Name = "carGrid5";
+            this.carGrid5.Size = new System.Drawing.Size(32, 50);
+            this.carGrid5.TabIndex = 4;
+            this.carGrid5.TabStop = false;
+            // 
+            // carGrid6
+            // 
+            this.carGrid6.BackColor = System.Drawing.Color.Green;
+            this.carGrid6.Location = new System.Drawing.Point(6, 94);
+            this.carGrid6.Name = "carGrid6";
+            this.carGrid6.Size = new System.Drawing.Size(32, 50);
+            this.carGrid6.TabIndex = 5;
+            this.carGrid6.TabStop = false;
+            // 
+            // carGrid7
+            // 
+            this.carGrid7.BackColor = System.Drawing.Color.Green;
+            this.carGrid7.Location = new System.Drawing.Point(49, 94);
+            this.carGrid7.Name = "carGrid7";
+            this.carGrid7.Size = new System.Drawing.Size(32, 50);
+            this.carGrid7.TabIndex = 6;
+            this.carGrid7.TabStop = false;
+            // 
+            // carGrid8
+            // 
+            this.carGrid8.BackColor = System.Drawing.Color.Green;
+            this.carGrid8.Location = new System.Drawing.Point(87, 94);
+            this.carGrid8.Name = "carGrid8";
+            this.carGrid8.Size = new System.Drawing.Size(32, 50);
+            this.carGrid8.TabIndex = 7;
+            this.carGrid8.TabStop = false;
+            // 
+            // carGrid9
+            // 
+            this.carGrid9.BackColor = System.Drawing.Color.Green;
+            this.carGrid9.Location = new System.Drawing.Point(125, 94);
+            this.carGrid9.Name = "carGrid9";
+            this.carGrid9.Size = new System.Drawing.Size(32, 50);
+            this.carGrid9.TabIndex = 8;
+            this.carGrid9.TabStop = false;
+            // 
+            // carGrid10
+            // 
+            this.carGrid10.BackColor = System.Drawing.Color.Green;
+            this.carGrid10.Location = new System.Drawing.Point(162, 94);
+            this.carGrid10.Name = "carGrid10";
+            this.carGrid10.Size = new System.Drawing.Size(32, 50);
+            this.carGrid10.TabIndex = 9;
+            this.carGrid10.TabStop = false;
             // 
             // Form1
             // 
@@ -588,6 +710,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxEntranceOpen)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -596,12 +719,22 @@
             this.groupBox12.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carGrid10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -655,6 +788,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbxAdvanceLicensePlate;
         private System.Windows.Forms.Button btnAdvancePay;
+        private System.Windows.Forms.PictureBox carGrid10;
+        private System.Windows.Forms.PictureBox carGrid9;
+        private System.Windows.Forms.PictureBox carGrid8;
+        private System.Windows.Forms.PictureBox carGrid7;
+        private System.Windows.Forms.PictureBox carGrid6;
+        private System.Windows.Forms.PictureBox carGrid5;
+        private System.Windows.Forms.PictureBox carGrid4;
+        private System.Windows.Forms.PictureBox carGrid3;
+        private System.Windows.Forms.PictureBox carGrid2;
+        private System.Windows.Forms.PictureBox carGrid1;
     }
 }
 

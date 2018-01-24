@@ -84,7 +84,7 @@ namespace CarParkSystem
     }
     public class Floor
     {
-        private int maxCarsPerFloor = 50;
+        private int maxCarsPerFloor = 10;
         private int currentNumCars = 0;
         public void addCar()
         {
