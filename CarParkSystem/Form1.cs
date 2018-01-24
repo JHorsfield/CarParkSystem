@@ -17,7 +17,7 @@ namespace CarParkSystem
         Car currentCar;
         PaymentChip currentChip;
         int timeDilation;
-        List<String> prepaidedLicences;
+        List<String> prepaidedLicences = new List<String>();
 
         public Form1()
         {
