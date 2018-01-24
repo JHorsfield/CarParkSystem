@@ -1,0 +1,65 @@
+Tests
+
+1: Normal parking progression:
+  1.1   a Car comes to the Entrance, it's license plate is read.Input the car's licensePlate in the "License Plate Scanner". 
+	This happens with out the driver being aware, while they are stopped they will be instructed to input a passowrd and get a 
+	'Coin' from the the the coin dispencer next to them.Press the "Get Coin" button for this. Once both of these are done the 
+	entrance will open and the car can enter the Carpark.Press the "New Car" button to do this.
+		**Enter "license plate" into 'license plate scanner'. Enter password into 'Passcode'. Press 'Get coin'.Press 'New Car'.**
+
+  1.2   This Car will then choose which floor to park on. The number of free spaces in each floor will be displaced at the entrance
+	(as seen on the planel to the left). As the car asends/descends sensers on the ramps will record which floor it stops on
+	(as seeb by the 'Current' tag) you can use the two'go up' and 'go down' buttons to choose your floor and then 'park' to park
+	on a space within that floor.
+		**Use 'go up floor' and 'go down floor' to get to a floor. Press 'Park' to select that floor.**
+
+  1.3   Obviously you will leave your car here and go about your buisness, Sine our carpark's clock is tied to the current time and
+	we don't want to have to wait in real time you can use the 'Time++' and 'Time--' to add and subtract time respectivly.
+		**Use 'Time++' and 'Time--' to change the current time.**
+
+  1.4	Once time has passed, using the before stated method, and you wish to leave you can pay using a 'payment machine'.
+	First enter your coin(by selecting it from the list of unpaid coins on the left) then press 'Pay for stay', you will then 
+	be promted to pay an amount equal to a hourly rate x the hours you've been parked(currently the hourly rate is £2 per hour).
+	You can press 'Yes' or 'No', 'Yes' means you have paid somehow(This is out of scope for us hence the simple yes) and 'No'
+	meaning that you cancel the payment and walk away.
+		**Select coin on left panel. Press 'Pay for stay'. Then 'Yes'.**
+
+  1.5	At this point you can leave when ever you want, by driving your car to the exit. This will once again trip the ramp scanners
+	showing that your space is open. At the exit your license Plate is once again scanned you will insert your coin and you will 
+	be asked for your password (the one you input at the start). To do this select the coin from the list on the left and type down
+	your password, At this point press exit and the coin will be reset, your listen plate remove from the list and you and your car
+	will leave.
+		**Select coin on left panel. Enter password. Press 'exit'.**
+
+2: Discounted parking
+  1.1-
+  1.2-
+  1.3-
+	
+  2	You can apply a discount using a carpark afilated id card, While most id cards work from a set discount(in our case 20%) it is also
+	possible for a manual discount to be input by staff.This is shown by the number box with the number inside being the % taken off your
+	price. However normally you would simply insert your coin into the machine(selecting a coin from the panel to the left) and swipe your
+	card(press the button with the swipe card image).
+		**Select coin from panel to the left. Press swipe card button.**
+  1.4-
+  1.5-
+
+3: Advanced Pay
+  3	You may wish to pay before hand, the way to do this is simple. Through some method(maybe online maybe in carpark, this is out of our scope)
+	input your License plate number and pay a set amount(payment is out of scope). Then when you next go to pay for a coin the machine will
+	see that you have already paid and not ask for any money but will still allow you to have paid like normal.
+		**Enter license plate. Press advanced Pay.**
+
+  Can be done at any stage before part 1.4-
+4: trying to park on a floor thats full
+  1.1-
+  1.2-
+
+  4	If you try to park on a floor that is full then obviously in the car park it'self you will simply not be able to get in, but within the program
+	if you tried that it could give you a error message and you wouldn't be able to park.
+		**repeat steps 1.1 and 1.2 till a floor is full**
+
+5: Emergency Mode
+  5	Pressing the Emergency button will activate Emergency mode, This means nothing can happen till it is cancelled both in carpark and in application.
+
+
