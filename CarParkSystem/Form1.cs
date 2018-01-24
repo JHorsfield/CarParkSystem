@@ -183,45 +183,48 @@ namespace CarParkSystem
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            string licenseInput = lbxCarList.SelectedItem.ToString();
-            string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
-
-            bool paid = false;
-
-            foreach (var paidLicence in prepaidedLicences)
+            if (lbxCarList.SelectedItem != null)
             {
-                if (licensePlate == paidLicence)
-                    paid = true;
-            }
-            if (paid)
-            {
+                string licenseInput = lbxCarList.SelectedItem.ToString();
+                string licensePlate = licenseInput.Substring(0, licenseInput.IndexOf(" "));
 
-                int coinId = carpark.getCar(licensePlate).getCoinId();
-                carpark.getDiscountMachine().getTicketChip().Remove(coinId);
-                carpark.getCar(licensePlate).removeCoin();
-                prepaidedLicences.Remove(licensePlate);
-            }
-            else
-            {
-                lblpayneeded.Text = licensePlate;
-                int coinId = carpark.getCar(licensePlate).getCoinId();
-                DateTime techincallyNow = DateTime.Now.AddHours(timeDilation);
-                TimeSpan timeSpent = techincallyNow - carpark.GetChipMachine().getTicketChip()[coinId].returnStartTime();
-                int hoursSpent = timeSpent.Hours;
-                //lblToPay.Text = hoursSpent.ToString();
+                bool paid = false;
 
-                float payment;
-                float discount = carpark.GetChipMachine().getTicketChip()[coinId].returnDiscount() + 1;
-                payment = hoursSpent * 2 * discount;
-
-                DialogResult YesOrNo = MessageBox.Show("£" + payment + " due would you like to pay now?", "Payment", MessageBoxButtons.YesNo);
-                if (YesOrNo == DialogResult.Yes)
+                foreach (var paidLicence in prepaidedLicences)
                 {
+                    if (licensePlate == paidLicence)
+                        paid = true;
+                }
+                if (paid)
+                {
+
+                    int coinId = carpark.getCar(licensePlate).getCoinId();
                     carpark.getDiscountMachine().getTicketChip().Remove(coinId);
                     carpark.getCar(licensePlate).removeCoin();
+                    prepaidedLicences.Remove(licensePlate);
                 }
+                else
+                {
+                    lblpayneeded.Text = licensePlate;
+                    int coinId = carpark.getCar(licensePlate).getCoinId();
+                    DateTime techincallyNow = DateTime.Now.AddHours(timeDilation);
+                    TimeSpan timeSpent = techincallyNow - carpark.GetChipMachine().getTicketChip()[coinId].returnStartTime();
+                    int hoursSpent = timeSpent.Hours;
+                    //lblToPay.Text = hoursSpent.ToString();
+
+                    float payment;
+                    float discount = carpark.GetChipMachine().getTicketChip()[coinId].returnDiscount() + 1;
+                    payment = hoursSpent * 2 * discount;
+
+                    DialogResult YesOrNo = MessageBox.Show("£" + payment + " due would you like to pay now?", "Payment", MessageBoxButtons.YesNo);
+                    if (YesOrNo == DialogResult.Yes)
+                    {
+                        carpark.getDiscountMachine().getTicketChip().Remove(coinId);
+                        carpark.getCar(licensePlate).removeCoin();
+                    }
+                }
+                updateCarListBox();
             }
-            updateCarListBox();
 
         }
 
