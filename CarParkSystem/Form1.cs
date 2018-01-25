@@ -21,7 +21,7 @@ namespace CarParkSystem
         bool[,] carGridArray = new bool[4, 10]{ { true, true, true, true, true, true, true, true, true, true },
             { true, true, true, true, true, true, true, true, true, true },
             { true, true, true, true, true, true, true, true, true, true },
-            { true, true, true, true, true, true, true, true, true, false }};
+            { true, true, true, true, true, true, true, true, true, true }};
         PictureBox[] carGridBoxes; 
 
         public Form1()
@@ -402,9 +402,16 @@ for(int count=0; count<10; count++)
 
         private void btnEmergency_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Car Park in shut down please wait till the emergency services arrive");
                 pbxEntranceOpen.Visible = !pbxEntranceOpen.Visible;
                 pbxEntranceClosed.Visible = !pbxEntranceClosed.Visible;
+            if (pbxEntranceOpen.Visible)
+            {
+                MessageBox.Show("Car Park is in shut down, please wait until the emergency services arrive");
+            }
+            else
+            {
+                MessageBox.Show("Emergency over, Car Park is back to normal");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
